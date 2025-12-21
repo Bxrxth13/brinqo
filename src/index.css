@@ -3,8 +3,99 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Neutral High-Quality Zinc - Light */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary updated to be DARK (Black-ish) for text visibility */
+    --secondary: 240 5.9% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* Brand Accent - Red */
+    --accent: 350 79% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.75rem;
+
+    /* Semantic */
+    --success: 153 60% 53%;
+    /* #10b981 converted approx */
+    --warning: 38 92% 50%;
+    /* #f59e0b converted approx */
+    --info: 217 91% 60%;
+    /* #3b82f6 converted approx */
+  }
+
+  .dark {
+    /* Sophisticated Charcoal - Dark */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    /* Secondary updated to be LIGHT for text visibility on dark bg */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Brand Accent - Red (Persistent across modes) */
+    --accent: 350 79% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  * {
+    @apply border-border outline-ring/30 transition-all duration-300 ease-in-out;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
-    @apply font-sans text-primary bg-background antialiased;
+    @apply bg-background text-foreground font-sans antialiased selection:bg-accent/15 selection:text-accent;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  }
+
+  /* Sleek Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/10 rounded-full hover:bg-muted-foreground/30 transition-colors;
   }
 
   h1,
@@ -13,7 +104,7 @@
   h4,
   h5,
   h6 {
-    @apply font-display text-primary;
+    @apply font-display font-bold tracking-tight text-balance;
   }
 }
 
@@ -23,19 +114,19 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-md font-semibold text-[15px] transition-all duration-300 hover:bg-[#333] hover:-translate-y-px hover:shadow-lg inline-flex items-center;
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold text-[15px] transition-all duration-300 hover:bg-primary/90 hover:-translate-y-px hover:shadow-lg inline-flex items-center;
   }
 
   .btn-dark {
-    @apply bg-primary text-white px-8 py-4 rounded-md font-semibold text-base transition-all duration-300 hover:bg-[#333] hover:-translate-y-0.5 hover:shadow-xl inline-flex items-center gap-2;
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-md font-semibold text-base transition-all duration-300 hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-xl inline-flex items-center gap-2;
   }
 
   .btn-outline {
-    @apply bg-transparent text-primary border-2 border-[#e0e0e0] px-8 py-3.5 rounded-md font-semibold text-base transition-all duration-300 hover:border-accent hover:text-accent hover:bg-[#fff5f6] hover:-translate-y-0.5;
+    @apply bg-transparent text-primary border-2 border-border px-8 py-3.5 rounded-md font-semibold text-base transition-all duration-300 hover:border-accent hover:text-accent hover:bg-accent/5 hover:-translate-y-0.5;
   }
 
   .nav-link {
-    @apply text-primary font-medium text-[15px] transition-colors duration-200 hover:text-accent relative;
+    @apply text-foreground/80 font-medium text-[15px] transition-colors duration-200 hover:text-accent relative;
   }
 
   .nav-link.active {
@@ -50,6 +141,57 @@
   /* Animations */
   .fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  /* --- Visual Depth Effects --- */
+
+  .glass {
+    @apply bg-background/50 backdrop-blur-xl border border-white/5 shadow-2xl;
+  }
+
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-foreground via-foreground to-foreground/50;
+  }
+
+  .glow {
+    @apply shadow-glow transition-shadow duration-500;
+  }
+
+  /* --- Interactive Micro-transitions --- */
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-95;
+  }
+
+  .hover-brighten {
+    @apply transition-all duration-300 hover:brightness-110 active:brightness-90;
+  }
+
+  /* --- Skeleton & Loading Pattern --- */
+
+  .shimmer-bg {
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    @apply animate-shimmer;
+  }
+
+  /* --- Layout Utilities --- */
+
+  .center-flex {
+    @apply flex items-center justify-center;
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
 }
 

@@ -13,11 +13,9 @@ const Footer = () => {
 
                 {/* Top Section: CTA & Vision */}
                 <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-10 mb-8 border-b border-white/10 pb-8">
-                    <div>
-                        <h2 className="font-display text-2xl md:text-3xl font-medium leading-[1.2] mb-6 max-w-[500px]">
-                            Ready to transform your vision into reality?
-                        </h2>
-                        <Link to="/" className="font-display text-3xl font-bold tracking-tighter text-white mb-4 inline-block">
+                    <div className="flex flex-col justify-end items-start">
+
+                        <Link to="/" className="font-display text-3xl font-bold tracking-tighter text-white mb-14 inline-block">
                             Brinqo<span className="text-accent">.</span>
                         </Link>
                         <div className="flex gap-4">

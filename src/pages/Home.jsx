@@ -30,7 +30,7 @@ const Home = () => {
                                         <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </Link>
-                                <Link to="/about" className="btn-outline w-full sm:w-auto justify-center">View Case Studies</Link>
+                                <Link to="/about" className="btn-outline w-full sm:w-auto justify-center inline-flex items-center">View Case Studies</Link>
                             </div>
                         </div>
 

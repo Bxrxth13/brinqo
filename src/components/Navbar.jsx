@@ -22,12 +22,10 @@ const Navbar = () => {
                 </nav>
 
                 <div className="hidden md:flex gap-4 items-center">
-                    <Link to="/contact" className="font-sans font-medium text-[15px] text-primary hover:text-secondary px-5 py-2.5 transition-colors">
-                        Log In
-                    </Link>
-                    <Link to="/contact" className="btn-primary">
+
+                    <a href="tel:+19803226955" className="btn-primary">
                         Talk to an Expert
-                    </Link>
+                    </a>
                 </div>
             </div>
         </header>

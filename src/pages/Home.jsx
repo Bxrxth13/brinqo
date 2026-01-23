@@ -6,8 +6,11 @@ import Layout from '../components/Layout';
 const Home = () => {
     return (
         <Layout>
-            <div className="hero pt-[100px] pb-[120px] bg-white">
-                <div className="container-custom">
+            <div className="hero pt-[100px] pb-[120px] bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[60%] h-full opacity-10 pointer-events-none select-none">
+                    <img src="/assets/hero-shape.png" alt="" className="w-full h-full object-cover object-left" />
+                </div>
+                <div className="container-custom relative z-10">
                     <div className="flex flex-col lg:flex-row justify-between items-start gap-20">
                         {/* Left Content */}
                         <div className="flex-1 max-w-[600px] fade-in-up" style={{ animationDelay: '0s' }}>
@@ -22,7 +25,7 @@ const Home = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 items-center fade-in-up" style={{ animationDelay: '0.2s' }}>
                                 <Link to="/contact" className="btn-dark w-full sm:w-auto justify-center">
-                                    Join Us!
+                                    Get Started
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -31,9 +34,13 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="flex-none w-full lg:w-[380px] flex flex-col gap-4 pt-10">
-                            <Link to="/build" className="bg-white border border-border rounded-[10px] p-5 px-6 transition-all duration-300 cursor-pointer flex items-center gap-5 hover:border-accent hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(232,48,79,0.15)] group fade-in-up" style={{ animationDelay: '0.3s' }}>
-                                <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-transform duration-300 group-hover:scale-105">
+                        <div className="flex-none w-full lg:w-[380px] flex flex-col gap-4 pt-0">
+                            <div className="mb-2 fade-in-up" style={{ animationDelay: '0.2s' }}>
+                                <h2 className="font-display text-4xl font-extrabold text-primary mb-1 tracking-[-0.5px]">What <span className="text-accent">We</span> Deliver </h2>
+                                <p className="text-sm text-secondary">Comprehensive solutions for your business</p>
+                            </div>
+                            <div className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.3s' }}>
+                                <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-all duration-300 group-hover:scale-110">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-current">
                                         <rect x="3" y="3" width="7" height="7" strokeWidth="2" />
                                         <rect x="14" y="3" width="7" height="7" strokeWidth="2" />
@@ -41,26 +48,30 @@ const Home = () => {
                                         <rect x="14" y="14" width="7" height="7" strokeWidth="2" />
                                     </svg>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="font-display text-sm font-bold tracking-[0.3px] text-primary group-hover:text-accent transition-colors">BUILD</h3>
-                                    <p className="text-sm leading-[1.5] text-secondary font-normal">Websites, apps, AI agents, and testing solutions.</p>
+                                <div className="flex flex-col gap-3 flex-1">
+                                    <Link to="/build" className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
+                                        BUILD
+                                    </Link>
+                                    <p className="text-sm leading-[1.6] text-secondary font-normal">Websites, apps, AI agents, and testing solutions. <span className="text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
                                 </div>
-                            </Link>
+                            </div>
 
-                            <Link to="/brand" className="bg-white border border-border rounded-[10px] p-5 px-6 transition-all duration-300 cursor-pointer flex items-center gap-5 hover:border-accent hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(232,48,79,0.15)] group fade-in-up" style={{ animationDelay: '0.4s' }}>
-                                <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-transform duration-300 group-hover:scale-105">
+                            <div className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.4s' }}>
+                                <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-all duration-300 group-hover:scale-110">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-current">
                                         <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="font-display text-sm font-bold tracking-[0.3px] text-primary group-hover:text-accent transition-colors">BRAND</h3>
-                                    <p className="text-sm leading-[1.5] text-secondary font-normal">Marketing, identity, positioning, and growth.</p>
+                                <div className="flex flex-col gap-3 flex-1">
+                                    <Link to="/brand" className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
+                                        BRAND
+                                    </Link>
+                                    <p className="text-sm leading-[1.6] text-secondary font-normal">Marketing, identity, positioning, and growth. <span className="text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
                                 </div>
-                            </Link>
+                            </div>
 
-                            <Link to="/bridge" className="bg-white border border-border rounded-[10px] p-5 px-6 transition-all duration-300 cursor-pointer flex items-center gap-5 hover:border-accent hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(232,48,79,0.15)] group fade-in-up" style={{ animationDelay: '0.5s' }}>
-                                <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-transform duration-300 group-hover:scale-105">
+                            <div className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.5s' }}>
+                                <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-all duration-300 group-hover:scale-110">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-current">
                                         <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         <circle cx="9" cy="7" r="4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -68,11 +79,13 @@ const Home = () => {
                                         <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="font-display text-sm font-bold tracking-[0.3px] text-primary group-hover:text-accent transition-colors">BRIDGE</h3>
-                                    <p className="text-sm leading-[1.5] text-secondary font-normal">Talent, training, and delivery.</p>
+                                <div className="flex flex-col gap-3 flex-1">
+                                    <Link to="/bridge" className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
+                                        BRIDGE
+                                    </Link>
+                                    <p className="text-sm leading-[1.6] text-secondary font-normal">Talent, training, and delivery. <span className="text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -5,8 +5,12 @@ import Layout from '../components/Layout';
 const About = () => {
     return (
         <Layout>
-            <section className="py-[100px] pb-[80px] bg-white">
-                <div className="container-custom">
+            <section className="py-20 pb-16 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[60%] h-full opacity-10 pointer-events-none select-none">
+                    <img src="/assets/about_hero_bg.png" alt="" className="w-full h-full object-cover object-left" />
+                    <div className="absolute inset-0 bg-gradient-to-l from-white via-white/50 to-transparent"></div>
+                </div>
+                <div className="container-custom relative z-10">
                     <h1 className="font-display text-[48px] md:text-[64px] font-black leading-[1.1] text-primary mb-6 tracking-[-2px]">
                         We're <span className="text-accent">Brinqo</span>
                     </h1>
@@ -17,7 +21,7 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="py-[100px] bg-alt">
+            <section className="py-20 bg-slate-50/50">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="bg-white border border-border rounded-xl p-10">
@@ -40,22 +44,26 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="py-[100px]">
+            <section className="py-20">
                 <div className="container-custom">
-                    <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]">Why Brinqo Exists</h2>
-                    <p className="text-[17px] text-secondary max-w-[600px] mb-12">We started Brinqo because we believed there was a better way.</p>
-
-                    <div className="max-w-[800px]">
-                        <p className="text-[18px] leading-[1.8] text-[#444] mb-6">
-                            Too many businesses struggle to find the right mix of technology, branding, and talent.
-                            They work with fragmented vendors, face communication gaps, and end up with solutions
-                            that don't quite fit.
-                        </p>
-                        <p className="text-[18px] leading-[1.8] text-[#444]">
-                            We built Brinqo to be different—a single partner that understands the full picture.
-                            Whether you need to build a product, establish your brand, or scale your team,
-                            we bring a unified approach that delivers real results.
-                        </p>
+                    <div className="flex flex-col lg:flex-row gap-16 items-start">
+                        <div className="flex-1">
+                            <div className="bg-[#f5f5f5] rounded-2xl h-[400px] w-full flex items-center justify-center border border-border relative overflow-hidden group">
+                                <img src="/assets/about_story.png" alt="Collaborative Team" className="absolute inset-0 w-full h-full object-cover" />
+                            </div>
+                        </div>
+                        <div className="flex-1">
+                            <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-6 tracking-[-1px]">Our Story</h2>
+                            <p className="text-[18px] leading-[1.8] text-secondary mb-6">
+                                The digital landscape is fragmented. Startups struggle to scale, and enterprises struggle to innovate. We saw a gap between great ideas and their execution—often widened by disconnected vendors and siloed strategies.
+                            </p>
+                            <p className="text-[18px] leading-[1.8] text-secondary mb-6">
+                                We built Brinqo to close that gap. By unifying <strong>Technology (Build)</strong>, <strong>Brand (Brand)</strong>, and <strong>Talent (Bridge)</strong> under one roof, we provide a holistic ecosystem for growth.
+                            </p>
+                            <p className="text-[18px] leading-[1.8] text-secondary font-medium">
+                                We are the partners we wish we had when we started.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -45,19 +45,22 @@ const Contact = () => {
 
     return (
         <Layout>
-            <section className="pt-[60px] pb-[40px] md:pt-[100px] md:pb-[60px] bg-white">
-                <div className="container-custom text-center">
+            <section className="py-20 md:py-28 bg-white relative">
+                <div className="absolute inset-0 opacity-10 pointer-events-none select-none">
+                    <img src="/assets/contact_hero_bg.png" alt="" className="w-full h-full object-cover" />
+                </div>
+                <div className="container-custom text-center relative z-10">
                     <h1 className="font-display text-[48px] md:text-[64px] font-black leading-[1.1] text-primary mb-6 tracking-[-2px] animate-in fade-in slide-in-from-bottom-4 duration-700">
                         Let's Build Something <span className="text-accent">Great</span>
                     </h1>
                     <p className="text-[18px] leading-[1.7] text-secondary max-w-[600px] mx-auto animate-in fade-in slide-in-from-bottom-5 duration-700 delay-100">
-                        Ready to transform your ideas into reality? We'd love to hear about
-                        your project and explore how we can help.
+                        Whether you need a new product, a brand refresh, or a dedicated team, we are here to help.
+                        No commitment, just a conversation about your future.
                     </p>
                 </div>
             </section>
 
-            <section className="pb-[120px]">
+            <section className="pb-20 md:pb-32">
                 <div className="container-custom">
                     <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] border border-border overflow-hidden grid grid-cols-1 lg:grid-cols-[1.5fr_1fr]">
 
@@ -153,8 +156,23 @@ const Contact = () => {
                             <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none"></div>
 
                             <div>
-                                <h3 className="font-display text-[28px] font-bold mb-2">Contact Information</h3>
-                                <p className="text-white/60 mb-10 text-lg">We'd love to hear from you. Here's how you can reach us.</p>
+                                <h3 className="font-display text-[28px] font-bold mb-6">Why Partner With Us?</h3>
+                                <ul className="space-y-4 mb-10 text-white/80 text-sm">
+                                    <li className="flex gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                                        <span>Enterprise-grade quality for every project</span>
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                                        <span>Transparent communication & pricing</span>
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
+                                        <span>Full-cycle support: Build, Brand, Bridge</span>
+                                    </li>
+                                </ul>
+
+                                <div className="h-px bg-white/10 mb-10"></div>
 
                                 <div className="space-y-8">
                                     <div className="flex items-start gap-4 group">

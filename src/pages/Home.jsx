@@ -6,8 +6,10 @@ import Layout from '../components/Layout';
 const Home = () => {
     return (
         <Layout>
-            <div className="hero pt-[100px] pb-[120px] bg-white relative overflow-hidden">
+            <div className="hero pt-20 pb-24 bg-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[60%] h-full opacity-10 pointer-events-none select-none">
+                    {/* Image Style: Minimal, abstract tech visuals, modern gradients, human + technology blend */}
+                    {/* Keywords: abstract technology flow, digital transformation, startup team collaboration, AI abstract visuals */}
                     <img src="/assets/hero-shape.png" alt="" className="w-full h-full object-cover object-left" />
                 </div>
                 <div className="container-custom relative z-10">
@@ -36,10 +38,10 @@ const Home = () => {
 
                         <div className="flex-none w-full lg:w-[380px] flex flex-col gap-4 pt-0">
                             <div className="mb-2 fade-in-up" style={{ animationDelay: '0.2s' }}>
-                                <h2 className="font-display text-4xl font-extrabold text-primary mb-1 tracking-[-0.5px]">What <span className="text-accent">We</span> Deliver </h2>
+                                <h2 className="font-display text-4xl font-extrabold text-primary mb-1 tracking-[-0.5px]">Brinqo's <span className="text-accent">B</span> Trinity</h2>
                                 <p className="text-sm text-secondary">Comprehensive solutions for your business</p>
                             </div>
-                            <div className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.3s' }}>
+                            <Link to="/build" className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.3s' }}>
                                 <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-all duration-300 group-hover:scale-110">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-current">
                                         <rect x="3" y="3" width="7" height="7" strokeWidth="2" />
@@ -49,28 +51,28 @@ const Home = () => {
                                     </svg>
                                 </div>
                                 <div className="flex flex-col gap-3 flex-1">
-                                    <Link to="/build" className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
+                                    <span className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
                                         BUILD
-                                    </Link>
+                                    </span>
                                     <p className="text-sm leading-[1.6] text-secondary font-normal">Websites, apps, AI agents, and testing solutions. <span className="text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
                                 </div>
-                            </div>
+                            </Link>
 
-                            <div className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.4s' }}>
+                            <Link to="/brand" className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.4s' }}>
                                 <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-all duration-300 group-hover:scale-110">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-current">
                                         <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                                 <div className="flex flex-col gap-3 flex-1">
-                                    <Link to="/brand" className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
+                                    <span className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
                                         BRAND
-                                    </Link>
+                                    </span>
                                     <p className="text-sm leading-[1.6] text-secondary font-normal">Marketing, identity, positioning, and growth. <span className="text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
                                 </div>
-                            </div>
+                            </Link>
 
-                            <div className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.5s' }}>
+                            <Link to="/bridge" className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.5s' }}>
                                 <div className="w-10 h-10 min-w-[40px] rounded-lg flex items-center justify-center bg-[#FFE8EC] text-accent transition-all duration-300 group-hover:scale-110">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-current">
                                         <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -80,12 +82,12 @@ const Home = () => {
                                     </svg>
                                 </div>
                                 <div className="flex flex-col gap-3 flex-1">
-                                    <Link to="/bridge" className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
+                                    <span className="self-start px-4 py-1.5 border border-accent rounded-[6px] text-xs font-bold tracking-wider text-white bg-accent transition-all duration-300 shadow-sm hover:brightness-110">
                                         BRIDGE
-                                    </Link>
+                                    </span>
                                     <p className="text-sm leading-[1.6] text-secondary font-normal">Talent, training, and delivery. <span className="text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span></p>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -103,7 +105,7 @@ const Home = () => {
             </section>
 
             {/* Why Choose Us */}
-            <section className="py-[100px] bg-alt">
+            <section className="py-20 bg-slate-50">
                 <div className="container-custom">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                         <div>

@@ -5,181 +5,247 @@ import Layout from '../components/Layout';
 const Brand = () => {
     return (
         <Layout>
-            {/* Page Hero */}
-            <section className="py-20 pb-16 bg-gradient-to-b from-accent/5 to-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
-                    <img src="/assets/brand_impact.png" alt="" className="w-full h-full object-cover" />
-                </div>
+            {/* Page Hero - Left aligned with image on the right (consistent with other pages) */}
+            <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+                <div className="absolute top-0 inset-x-0 h-[420px] bg-gradient-to-b from-slate-50 to-transparent pointer-events-none -z-10" />
                 <div className="container-custom relative z-10">
-                    <h1 className="font-display text-[48px] md:text-[64px] font-black leading-[1.1] text-primary mb-6 tracking-[-2px]">
-                        Build Brands That<br />People <span className="text-accent">Trust</span>
-                    </h1>
-                    <p className="text-[18px] leading-[1.7] text-secondary max-w-[600px]">
-                        We blend strategy, design, and storytelling to create brands that stand out.
-                        From positioning to performance marketing, we help you connect with your
-                        audience and drive real business growth.
-                    </p>
-                </div>
-            </section>
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        {/* Left: Copy */}
+                        <div className="flex-1 text-left">
 
-            {/* Services Section */}
-            <section className="py-20 bg-slate-50">
-                <div className="container-custom">
-                    <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]">What <span className="text-accent">We </span>Do</h2>
-                    <p className="text-[17px] text-secondary max-w-[600px] mb-12">Strategic branding and marketing that drives results.</p>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                        {[
-                            {
-                                title: "Brand Identity",
-                                desc: "Crafting distinct visual systems, logos, and guidelines that make your brand instantly recognizable and memorable.",
-                                image: "/assets/brand_service_identity.png",
-                                color: "bg-purple-50"
-                            },
-                            {
-                                title: "Marketing Strategy",
-                                desc: "Comprehensive go-to-market plans, audience research, and multi-channel strategies to maximize your reach.",
-                                image: "/assets/brand_service_strategy.png",
-                                color: "bg-pink-50"
-                            },
-                            {
-                                title: "Performance Marketing",
-                                desc: "Data-driven paid media, SEO, and content campaigns focused on ROI, lead generation, and customer acquisition.",
-                                image: "/assets/brand_service_performance.png",
-                                color: "bg-blue-50"
-                            },
-                            {
-                                title: "Positioning & Growth",
-                                desc: "Defining your unique value proposition and executing growth hacks to help you scale rapidly in your market.",
-                                image: "/assets/brand_service_growth.png",
-                                color: "bg-yellow-50"
-                            },
-                        ].map((item, index) => (
-                            <div key={index} className="bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent hover:shadow-xl group flex flex-col md:flex-row h-full">
-                                <div className={`w-full md:w-2/5 h-48 md:h-auto ${item.color} relative overflow-hidden`}>
-                                    {/* Fallback pattern if image missing */}
-                                    <div className="absolute inset-0 opacity-10 bg-[url('/assets/hero-shape.png')] bg-cover"></div>
-                                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                </div>
-                                <div className="p-8 flex flex-col justify-center flex-1">
-                                    <h3 className="font-display text-xl font-bold text-primary mb-3">{item.title}</h3>
-                                    <p className="text-sm text-secondary leading-relaxed mb-4">
-                                        {item.desc}
-                                    </p>
-                                    <span className="text-accent text-sm font-semibold group-hover:underline decoration-accent underline-offset-4">Learn more →</span>
-                                </div>
+                            <div className="flex items-center gap-3 mb-8">
+                                <div className="h-[1px] w-8 bg-accent"></div>
+                                <span className="text-accent font-mono text-sm tracking-widest uppercase">Brand & Strategy</span>
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Narrative & Impact Section */}
-            <section className="py-20 bg-white border-y border-border">
-                <div className="container-custom">
-                    <div className="flex flex-col lg:flex-row gap-12 items-center mb-16">
-                        <div className="flex-1 order-2 lg:order-1">
-                            <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-6 tracking-[-1px]">The Power of <span className="text-accent">Narrative</span></h2>
-                            <p className="text-[17px] text-secondary leading-relaxed mb-6">
-                                We believe that the strongest brands are built on stories, not just visuals. When we worked with FinTech Innovator "X", we didn't just redesign their logo; we redefined their position in the market.
+                            <h1 className="font-display text-[48px] md:text-[72px] lg:text-[80px] font-black leading-[1.05] text-primary mb-8 tracking-[-3px]">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-red-600">  Build</span> Brands That People Trust.
+                            </h1>
+                            <p className="text-[18px] md:text-[20px] leading-[1.7] text-secondary max-w-[580px] mb-10">
+                                We don't just design logos; we build belief systems. Connect with your audience on a visceral level through strategic storytelling and world-class design.
                             </p>
-                            <p className="text-[17px] text-secondary leading-relaxed mb-6">
-                                By shifting their narrative from "feature-focused" to "outcome-oriented", we helped them connect with enterprise clients on a deeper level, resulting in a 40% increase in qualified leads within three months.
-                            </p>
-                            <p className="text-[17px] text-secondary leading-relaxed font-semibold">
-                                Your brand is your promise. We help you keep it.
-                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Link to="/contact" className="btn-primary rounded-full px-8 py-4 text-lg w-full sm:w-auto justify-center">
+                                    Start Your Project
+                                </Link>
+                            </div>
                         </div>
-                        <div className="flex-1 order-1 lg:order-2">
-                            <div className="bg-alt rounded-2xl border border-border h-[400px] flex items-center justify-center relative overflow-hidden group">
-                                <img src="/assets/brand_impact.png" alt="Visual Impact" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
-                                    <p className="text-white font-display font-bold text-xl tracking-wide">Visual Impact</p>
+
+                        {/* Right: Hero Visual */}
+                        <div className="flex-1 w-full max-w-[520px] lg:max-w-[560px]">
+                            <div className="bg-black/5 rounded-3xl h-[320px] md:h-[420px] lg:h-[460px] overflow-hidden relative shadow-[0_20px_60px_rgba(15,23,42,0.18)]">
+                                <img
+                                    src="/assets/dim.jpeg"
+                                    className="w-full h-full object-cover opacity-80"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-border border-t border-border pt-12">
-                        {[
-                            { value: "300%", label: "Average Growth" },
-                            { value: "50+", label: "Brands Launched" },
-                            { value: "$10M+", label: "Revenue Generated" }
-                        ].map((stat, i) => (
-                            <div key={i} className="pt-8 md:pt-0 px-8">
-                                <div className="font-display text-[48px] md:text-[56px] font-black text-accent mb-2">{stat.value}</div>
-                                <div className="text-secondary font-medium tracking-wide uppercase text-sm">{stat.label}</div>
+            {/* Services: Alternating Feature Rows (Unique from Grid) */}
+            <section className="py-24 bg-white">
+                <div className="container-custom">
+                    <div className="text-center mb-24">
+                        <h2 className="font-display text-[40px] font-black text-primary mb-4">The <span className="text-accent">Brinqo</span> Way</h2>
+                    </div>
+
+                    <div className="space-y-32">
+                        {/* Service Block 1: Strategy */}
+                        <div id="strategy" className="flex flex-col lg:flex-row gap-16 items-center">
+                            <div className="flex-1 order-2 lg:order-1">
+                                <span className="text-accent font-bold text-lg mb-2 block">01</span>
+                                <h3 className="font-display text-[32px] font-bold text-primary mb-6">Strategic Foundation</h3>
+                                <p className="text-lg text-secondary leading-relaxed mb-6">
+                                    Before we draw a single line, we define the 'Why'. We dive deep into market research, competitor analysis, and audience psychology to build a rock-solid foundation for your brand.
+                                </p>
+                                <ul className="space-y-3 mb-8">
+                                    {['Market Positioning', 'Audience Personas', 'Brand Archetypes'].map(item => (
+                                        <li key={item} className="flex items-center gap-3 text-primary font-medium">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-accent" /> {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Link to="/contact" className="text-accent font-bold underline underline-offset-4 hover:opacity-80">Explore Strategy</Link>
                             </div>
-                        ))}
+                            <div className="flex-1 order-1 lg:order-2 relative">
+                                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-pink-50 border border-pink-100 relative group">
+                                    <img src="/assets/stfn.png" alt="Strategy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Service Block 2: Identity */}
+                        <div id="identity" className="flex flex-col lg:flex-row gap-16 items-center">
+                            <div className="flex-1 order-1 relative">
+                                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-purple-50 border border-purple-100 relative group">
+                                    <img src="/assets/visual.png" alt="Identity" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                </div>
+                            </div>
+                            <div className="flex-1 order-2">
+                                <span className="text-accent font-bold text-lg mb-2 block">02</span>
+                                <h3 className="font-display text-[32px] font-bold text-primary mb-6">Visual Identity</h3>
+                                <p className="text-lg text-secondary leading-relaxed mb-6">
+                                    We translate strategy into sight. Using color theory, typography, and composition, we create distinct visual systems that make your brand unmistakable.
+                                </p>
+                                <ul className="space-y-3 mb-8">
+                                    {['Logo Design', 'Design Systems', 'Brand Guidelines'].map(item => (
+                                        <li key={item} className="flex items-center gap-3 text-primary font-medium">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-accent" /> {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Link to="/contact" className="text-accent font-bold underline underline-offset-4 hover:opacity-80">See Our Work</Link>
+                            </div>
+                        </div>
+
+                        {/* Service Block 3: Growth */}
+                        <div id="marketing" className="flex flex-col lg:flex-row gap-16 items-center">
+                            <div className="flex-1 order-2 lg:order-1">
+                                <span className="text-accent font-bold text-lg mb-2 block">03</span>
+                                <h3 className="font-display text-[32px] font-bold text-primary mb-6">Growth & Performance</h3>
+                                <p className="text-lg text-secondary leading-relaxed mb-6">
+                                    A beautiful brand must also perform. We implement data-driven marketing campaigns that leverage your new identity to drive leads, sales, and loyalty.
+                                </p>
+                                <ul className="space-y-3 mb-8">
+                                    {['Paid Media', 'SEO & Content', 'Conversion Optimization'].map(item => (
+                                        <li key={item} className="flex items-center gap-3 text-primary font-medium">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-accent" /> {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <Link to="/contact" className="text-accent font-bold underline underline-offset-4 hover:opacity-80">Drive Growth</Link>
+                            </div>
+                            <div className="flex-1 order-1 lg:order-2 relative">
+                                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-blue-50 border border-blue-100 relative group">
+                                    <img src="/assets/growth.png" alt="Growth" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            {/* Tools: Horizontal Scroller or Simple Strip */}
             {/* Creative Stack Section */}
-            <section className="py-20 bg-slate-50">
+            <section className="py-16 bg-[#1e293b] border-y border-blue-900">
                 <div className="container-custom">
-                    <div className="text-center mb-16">
-                        <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]"><span className="text-accent">Our</span> Creative Stack</h2>
-                        <p className="text-[17px] text-secondary max-w-[600px] mx-auto">We use industry-leading tools to design, analyze, and optimize.</p>
+                    <div className="text-center mb-12">
+                        <span className="text-accent font-bold tracking-widest text-sm uppercase mb-2 block">Our Arsenal</span>
+                        <h2 className="font-display text-3xl md:text-4xl font-black text-white">Powered By World-Class Tools</h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                        {[
-                            { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg' },
-                            { name: 'Adobe CC', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg' },
-                            { name: 'Webflow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webflow/webflow-original.svg' },
-                            { name: 'HubSpot', icon: 'https://cdn.worldvectorlogo.com/logos/hubspot-1.svg' },
-                            { name: 'Google Ads', icon: 'https://cdn.worldvectorlogo.com/logos/google-ads-2.svg' },
-                            { name: 'Midjourney', icon: 'https://cdn.worldvectorlogo.com/logos/midjourney.svg' },
-                        ].map((tech, i) => (
-                            <div key={i} className="bg-white border border-border p-6 rounded-xl flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:border-accent hover:shadow-lg hover:-translate-y-1 group">
-                                <div className="w-12 h-12 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300 p-1">
-                                    <img src={tech.icon} alt={tech.name} className="w-full h-full object-contain" />
-                                </div>
-                                <span className="font-semibold text-primary text-sm">{tech.name}</span>
+                    <div className="flex justify-center">
+                        <div className="grid grid-cols-3 md:grid-cols-6 gap-12 md:gap-16 items-center justify-items-center opacity-70 max-w-4xl">
+                            {/* Design & Creative */}
+                            <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" className="h-10 w-auto grayscale group-hover:grayscale-0 transition-all duration-300" alt="Figma" />
+                                <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Figma</span>
                             </div>
-                        ))}
+                            <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" className="h-10 w-auto grayscale group-hover:grayscale-0 transition-all duration-300" alt="Illustrator" />
+                                <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Illustrator</span>
+                            </div>
+                            <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" className="h-10 w-auto grayscale group-hover:grayscale-0 transition-all duration-300" alt="Photoshop" />
+                                <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Photoshop</span>
+                            </div>
+                            <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" className="h-10 w-auto grayscale group-hover:grayscale-0 transition-all duration-300" alt="Canva" />
+                                <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Canva</span>
+                            </div>
+
+                            {/* Strategy & Marketing */}
+                            <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" className="h-9 w-auto grayscale group-hover:grayscale-0 transition-all duration-300" alt="Google Ads" />
+                                <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Ads</span>
+                            </div>
+                            {/* <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Semrush_logo.svg" className="h-8 w-auto grayscale group-hover:grayscale-0 brightness-200 contrast-200 transition-all duration-300" alt="Semrush" />
+                            <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Semrush</span>
+                        </div> */}
+                            <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                                <img src="https://cdn.worldvectorlogo.com/logos/hubspot-1.svg" className="h-8 w-auto grayscale group-hover:grayscale-0 brightness-200 transition-all duration-300" alt="Hubspot" />
+                                <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Hubspot</span>
+                            </div>
+                            {/* <div className="group flex flex-col items-center gap-3 hover:opacity-100 transition-opacity">
+                            <img src="https://cdn.worldvectorlogo.com/logos/webflow-1.svg" className="h-8 w-auto grayscale group-hover:grayscale-0 brightness-200 transition-all duration-300" alt="Webflow" />
+                            <span className="text-xs font-semibold text-slate-500 group-hover:text-white transition-colors">Webflow</span>
+                        </div> */}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Process Section */}
-            <section className="py-20">
+            {/* Process: Vertical Timeline */}
+            <section className="py-24 bg-slate-50">
                 <div className="container-custom">
-                    <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]"><span className="text-accent">Our</span> Process</h2>
-                    <p className="text-[17px] text-secondary max-w-[600px] mb-12">How we bring your brand to life.</p>
+                    <div className="text-center mb-20">
+                        <h2 className="font-display text-[40px] font-black text-primary mb-4"><span className="text-accent">Our</span> Creative Arc</h2>
+                        <p className="text-secondary text-lg">Our proven path to extraordinary results.</p>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { step: "01", title: "Discover", desc: "We immerse ourselves in your business, researching your market and audience." },
-                            { step: "02", title: "Define", desc: "Establishing your brand strategy, positioning, and core messaging pillars." },
-                            { step: "03", title: "Design", desc: "Creating the visual identity and creative assets that represent your brand." },
-                            { step: "04", title: "Deliver", desc: "Launching your brand with a comprehensive guideline and go-to-market plan." }
-                        ].map((item, index) => (
-                            <div key={index} className="bg-white border border-border p-8 rounded-2xl relative overflow-hidden group hover:border-accent transition-all duration-300">
-                                <div className="font-display font-black text-6xl text-slate-100 absolute -top-4 -right-4 transition-colors group-hover:text-accent/5 select-none">{item.step}</div>
-                                <div className="relative z-10">
-                                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center text-accent font-bold mb-4 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-                                        {item.step}
-                                    </div>
-                                    <h3 className="font-bold text-lg text-primary mb-3">{item.title}</h3>
-                                    <p className="text-sm text-secondary leading-relaxed">{item.desc}</p>
+                    <div className="max-w-4xl mx-auto relative">
+                        {/* Center Line */}
+                        <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block" />
+
+                        <div className="space-y-12 relative">
+                            {/* Step 1 */}
+                            <div className="flex flex-col md:flex-row gap-8 items-center">
+                                <div className="flex-1 md:text-right">
+                                    <h3 className="font-bold text-2xl text-primary mb-2">Immersion</h3>
+                                    <p className="text-secondary leading-relaxed">We become an extension of your team, absorbing your culture and vision.</p>
+                                </div>
+                                <div className="w-[30px] h-[30px] rounded-full bg-accent border-4 border-white shadow-lg relative z-10 shrink-0" />
+                                <div className="flex-1 opacity-50 font-display font-black text-6xl text-slate-200 select-none hidden md:block">01</div>
+                            </div>
+
+                            {/* Step 2 */}
+                            <div className="flex flex-col md:flex-row gap-8 items-center">
+                                <div className="flex-1 md:text-right hidden md:block">
+                                    <div className="opacity-50 font-display font-black text-6xl text-slate-200 select-none">02</div>
+                                </div>
+                                <div className="w-[30px] h-[30px] rounded-full bg-primary border-4 border-white shadow-lg relative z-10 shrink-0" />
+                                <div className="flex-1">
+                                    <h3 className="font-bold text-2xl text-primary mb-2"><span className="text-accent">Ideation</span></h3>
+                                    <p className="text-secondary leading-relaxed">Divergent thinking to explore every possibility before narrowing down.</p>
                                 </div>
                             </div>
-                        ))}
+
+                            {/* Step 3 */}
+                            <div className="flex flex-col md:flex-row gap-8 items-center">
+                                <div className="flex-1 md:text-right">
+                                    <h3 className="font-bold text-2xl text-primary mb-2">Creation</h3>
+                                    <p className="text-secondary leading-relaxed">The heavy lifting. Designing, writing, and refining until it's perfect.</p>
+                                </div>
+                                <div className="w-[30px] h-[30px] rounded-full bg-accent border-4 border-white shadow-lg relative z-10 shrink-0" />
+                                <div className="flex-1 opacity-50 font-display font-black text-6xl text-slate-200 select-none hidden md:block">03</div>
+                            </div>
+
+                            {/* Step 4 */}
+                            <div className="flex flex-col md:flex-row gap-8 items-center">
+                                <div className="flex-1 md:text-right hidden md:block">
+                                    <div className="opacity-50 font-display font-black text-6xl text-slate-200 select-none">04</div>
+                                </div>
+                                <div className="w-[30px] h-[30px] rounded-full bg-primary border-4 border-white shadow-lg relative z-10 shrink-0" />
+                                <div className="flex-1">
+                                    <h3 className="font-bold text-2xl text-primary mb-2"><span className="text-accent">Launch</span></h3>
+                                    <p className="text-secondary leading-relaxed">Releasing your new brand into the world with impact and precision.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="py-[80px] pb-[100px] text-center">
+            {/* CTA Section */}
+            <section className="py-[100px] text-center bg-white">
                 <div className="container-custom">
-                    <h2 className="font-display text-[36px] font-extrabold text-primary mb-4">Ready to Build Your Brand?</h2>
-                    <p className="text-[17px] text-secondary mb-8">Let's create something people will remember.</p>
+                    <h2 className="font-display text-[48px] font-black text-primary mb-6">Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-red-600">Brand</span>, Reimagined.</h2>
                     <Link to="/contact" className="btn-dark justify-center">
-                        Build Your Brand
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        Let's Brand you
                     </Link>
                 </div>
             </section>

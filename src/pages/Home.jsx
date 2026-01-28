@@ -10,7 +10,7 @@ const Home = () => {
                 <div className="absolute top-0 right-0 w-[60%] h-full opacity-10 pointer-events-none select-none">
                     {/* Image Style: Minimal, abstract tech visuals, modern gradients, human + technology blend */}
                     {/* Keywords: abstract technology flow, digital transformation, startup team collaboration, AI abstract visuals */}
-                    <img src="/assets/hero-shape.png" alt="" className="w-full h-full object-cover object-left" />
+                    <img src="/assets/hero.png" alt="" className="w-full h-full object-cover object-left" />
                 </div>
                 <div className="container-custom relative z-10">
                     <div className="flex flex-col lg:flex-row justify-between items-start gap-20">
@@ -38,7 +38,7 @@ const Home = () => {
 
                         <div className="flex-none w-full lg:w-[380px] flex flex-col gap-4 pt-0">
                             <div className="mb-2 fade-in-up" style={{ animationDelay: '0.2s' }}>
-                                <h2 className="font-display text-4xl font-extrabold text-primary mb-1 tracking-[-0.5px]">Brinqo's <span className="text-accent">B</span> Trinity</h2>
+                                <h2 className="font-display text-4xl font-extrabold text-primary mb-1 tracking-[-0.5px]">Brinqo's <span className="text-accent">3B</span> Services</h2>
                                 <p className="text-sm text-secondary">Comprehensive solutions for your business</p>
                             </div>
                             <Link to="/build" className="bg-white border border-[#D4D4D4] rounded-[14px] p-5 px-6 shadow-sm transition-all duration-300 flex items-start gap-5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] group fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -105,27 +105,58 @@ const Home = () => {
             </section>
 
             {/* Why Choose Us */}
-            <section className="py-20 bg-slate-50">
+            <section className="py-24 bg-white border-t border-border">
                 <div className="container-custom">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                        <div>
-                            <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]">Why Brinqo?</h2>
-                            <p className="text-[17px] text-secondary max-w-[500px]">We don't just deliver projects; we engineer success through a unique blend of technology, design, and talent.</p>
-                        </div>
-                        <Link to="/about" className="btn-outline">More About Us</Link>
+                    <div className="text-center mb-16 max-w-3xl mx-auto">
+                        <span className="text-accent font-bold tracking-widest text-sm uppercase mb-3 block">The Brinqo Standard</span>
+                        <h2 className="font-display text-[40px] md:text-[52px] font-black text-primary mb-6 tracking-tight leading-[1.1]">
+                            Why <span className="text-accent underline decoration-accent/20 underline-offset-8">Brinqo?</span>
+                        </h2>
+                        <p className="text-[18px] text-secondary leading-relaxed">
+                            From building powerful solutions to branding them right and bridging execution gaps.
+                            Brinqo delivers end-to-end growth, not just services.
+                        </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[
-                            { title: "Enterprise Precision", desc: "Rigorous standards and robust architecture for scalable solutions." },
-                            { title: "Startup Speed", desc: "Agile methodologies that reduce time-to-market without cutting corners." },
-                            { title: "Unified Vision", desc: "Seamless integration of product, brand, and talent strategies." }
-                        ].map((feat, i) => (
-                            <div key={i} className="bg-white p-8 rounded-xl border border-border">
-                                <h3 className="font-display text-xl font-bold text-primary mb-3">{feat.title}</h3>
-                                <p className="text-secondary leading-relaxed">{feat.desc}</p>
+                        {/* Feature 1: Innovation */}
+                        <div className="bg-white p-8 rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg group">
+                            <div className="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" /></svg>
                             </div>
-                        ))}
+                            <h3 className="font-display text-2xl font-bold text-primary mb-3">Driven by Innovation</h3>
+                            <p className="text-secondary leading-relaxed text-[15px]">
+                                We don't just follow trends; we set them. Our engineering and design teams use cutting-edge tech to keep you ahead of the curve.
+                            </p>
+                        </div>
+
+                        {/* Feature 2: Impact */}
+                        <div className="bg-white p-8 rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg group">
+                            <div className="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                            </div>
+                            <h3 className="font-display text-2xl font-bold text-primary mb-3">Built for Impact</h3>
+                            <p className="text-secondary leading-relaxed text-[15px]">
+                                Every pixel and line of code is crafted with a purpose: to drive real business growth and create lasting user connections.
+                            </p>
+                        </div>
+
+                        {/* Feature 3: Scale */}
+                        <div className="bg-white p-8 rounded-2xl border border-border hover:border-accent/40 transition-all duration-300 hover:shadow-lg group">
+                            <div className="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                            </div>
+                            <h3 className="font-display text-2xl font-bold text-primary mb-3">Ready to Scale</h3>
+                            <p className="text-secondary leading-relaxed text-[15px]">
+                                From MVP to enterprise, our solutions grow with you. We build robust, scalable foundations that handle success effortlessly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="mt-16 text-center">
+                        <Link to="/about" className="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors border-b-2 border-transparent hover:border-accent pb-1">
+                            Explore Our Methodology <span className="text-lg">→</span>
+                        </Link>
                     </div>
                 </div>
             </section>

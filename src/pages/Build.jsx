@@ -5,68 +5,113 @@ import Layout from '../components/Layout';
 const Build = () => {
     return (
         <Layout>
-            {/* Page Hero */}
-            <section className="py-20 pb-16 bg-gradient-to-b from-accent/5 to-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
-                    <img src="/assets/build_engineering.png" alt="" className="w-full h-full object-cover" />
-                </div>
+            {/* Hero Section: Technical & Industrial */}
+            <section className="py-24 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-100 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+                <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/10 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2" />
+
                 <div className="container-custom relative z-10">
-                    <h1 className="font-display text-[48px] md:text-[64px] font-black leading-[1.1] text-primary mb-6 tracking-[-2px]">
-                        Build Digital Products<br />That <span className="text-accent">Scale</span>
-                    </h1>
-                    <p className="text-[18px] leading-[1.7] text-secondary max-w-[600px]">
-                        We engineer scalable, secure, and future-proof digital solutions. By combining
-                        enterprise-grade architecture with startup speed, we turn ambitious ideas into
-                        market-leading products.
-                    </p>
+                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                        <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-8">
+                                <div className="h-[1px] w-8 bg-accent"></div>
+                                <span className="text-accent font-mono text-sm tracking-widest uppercase">Engineering First</span>
+                            </div>
+                            <h1 className="font-display text-[56px] md:text-[80px] font-black leading-[1] mb-8 tracking-[-2px]">
+                                <span className="text-accent">Build</span> The <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-slate-500">Future.</span>
+                            </h1>
+                            <p className="text-[20px] leading-[1.6] text-secondary max-w-[600px] mb-10 font-light">
+                                We turn complex requirements into elegant, scalable software.
+                                From MVP to Enterprise, we deploy systems that are secure by design and built for speed.
+                            </p>
+                            <div className="flex gap-4">
+                                <Link to="/contact" className="bg-accent hover:bg-red-600 text-white px-8 py-4 rounded-lg font-bold transition-all flex items-center gap-2 shadow-md hover:shadow-lg">
+                                    Start Building
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </Link>
+                                <Link to="/contact" className="px-8 py-4 rounded-lg border border-border text-primary hover:bg-slate-100 transition-all font-medium">
+                                    View Architecture
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Hero Graphic: Code Block / Terminal Aesthetic */}
+                        <div className="flex-1 w-full max-w-[600px]">
+                            <div className="bg-slate-950 rounded-xl border border-slate-800 shadow-2xl p-4 font-mono text-sm relative overflow-hidden group text-white">
+                                <div className="flex gap-2 mb-4 border-b border-slate-800 pb-4">
+                                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                                </div>
+                                <div className="space-y-2 text-slate-300">
+                                    <div className="flex"><span className="text-purple-400 mr-2">const</span> <span className="text-yellow-300">Brinqo</span> = <span className="text-blue-400">new</span> <span className="text-yellow-300">Builder</span>({`{`}</div>
+                                    <div className="pl-6"><span className="text-blue-300">speed</span>: <span className="text-green-400">"Accelerated"</span>,</div>
+                                    <div className="pl-6"><span className="text-blue-300">quality</span>: <span className="text-green-400">"Enterprise-Grade"</span>,</div>
+                                    <div className="pl-6"><span className="text-blue-300">stack</span>: [<span className="text-green-400">"React"</span>, <span className="text-green-400">"Node"</span>, <span className="text-green-400">"AI"</span>],</div>
+                                    <div className="pl-6"><span className="text-blue-300">deploy</span>: <span className="text-purple-400">async</span> () ={`>`} <span className="text-yellow-300">await</span> <span className="text-blue-400">Launch</span>()</div>
+                                    <div>{`}`});</div>
+                                </div>
+                                <div className="absolute top-0 right-0 p-4 text-xs text-slate-600">v2.0.4</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* Services Section */}
-            <section className="py-20 bg-slate-50">
+            {/* Services: Industrial Grid */}
+            <section id="services" className="py-24 bg-slate-50">
                 <div className="container-custom">
-                    <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]">What <span className="text-accent">We </span>Build</h2>
-                    <p className="text-[17px] text-secondary max-w-[600px] mb-12">End-to-end digital product development for ambitious teams.</p>
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                        <div>
+                            <h2 className="font-display text-[40px] font-black text-primary leading-tight">Capabilities &<br /><span className="text-accent underline decoration-accent/20 underline-offset-8">Core Services</span></h2>
+                        </div>
+                        <p className="text-secondary max-w-sm text-right md:text-left">
+                            Precision engineering for every layer of your digital real estate.
+                        </p>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-3xl border border-slate-200">
                         {[
                             {
-                                title: "Websites & Web Apps",
-                                desc: "Scalable SaaS platforms, marketing sites, and complex web applications built with modern frameworks like React and Next.js.",
-                                image: "/assets/build_service_web.png",
-                                color: "bg-blue-50"
+                                title: "Web Platforms",
+                                desc: "High-performance SaaS and web apps built for millions of users.",
+                                stats: ["React / Next.js", "99.9% Uptime"],
+                                icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                             },
                             {
-                                title: "Mobile Apps",
-                                desc: "Native and cross-platform mobile applications for iOS and Android that deliver exceptional, fluid user experiences.",
-                                image: "/assets/build_service_mobile.png",
-                                color: "bg-purple-50"
+                                title: "Mobile Engineering",
+                                desc: "Native-quality experiences for iOS and Android using modern cross-platform tech.",
+                                stats: ["React Native", "Flutter"],
+                                icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
                             },
                             {
-                                title: "AI Agents & Automation",
-                                desc: "Intelligent automation with custom AI models, chatbots, and LLM integrations to streamline your business operations.",
-                                image: "/assets/build_service_ai.png",
-                                color: "bg-emerald-50"
+                                title: "AI Integration",
+                                desc: "Embed LLMs and machine learning directly into your business logic.",
+                                stats: ["OpenAI API", "Vector Ops"],
+                                icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
                             },
                             {
-                                title: "Testing & QA",
-                                desc: "Comprehensive testing strategies, automation frameworks, and robust quality assurance for bug-free, confident releases.",
-                                image: "/assets/build_service_qa.png",
-                                color: "bg-orange-50"
-                            },
+                                title: "DevOps & Cloud",
+                                desc: "Scalable infrastructure that grows automatically with your demand.",
+                                stats: ["AWS / Azure", "CI/CD Pipelines"],
+                                icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                            }
                         ].map((item, index) => (
-                            <div key={index} className="bg-white border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent hover:shadow-xl group flex flex-col md:flex-row h-full">
-                                <div className={`w-full md:w-2/5 h-48 md:h-auto ${item.color} relative overflow-hidden`}>
-                                    {/* Fallback pattern if image missing */}
-                                    <div className="absolute inset-0 opacity-10 bg-[url('/assets/hero-shape.png')] bg-cover"></div>
-                                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div key={index} className="bg-white p-10 border border-slate-100 hover:z-10 hover:shadow-2xl hover:border-slate-200 transition-all group relative">
+                                <div className="absolute top-10 right-10 opacity-10 group-hover:opacity-100 transition-opacity text-accent">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d={item.icon} /></svg>
                                 </div>
-                                <div className="p-8 flex flex-col justify-center flex-1">
-                                    <h3 className="font-display text-xl font-bold text-primary mb-3">{item.title}</h3>
-                                    <p className="text-sm text-secondary leading-relaxed mb-4">
-                                        {item.desc}
-                                    </p>
-                                    <span className="text-accent text-sm font-semibold group-hover:underline decoration-accent underline-offset-4">Learn more →</span>
+                                <h3 className="font-display text-2xl font-bold text-primary mb-3">{item.title}</h3>
+                                <p className="text-secondary mb-8 max-w-xs leading-relaxed">
+                                    {item.desc}
+                                </p>
+                                <div className="flex gap-3">
+                                    {item.stats.map(stat => (
+                                        <span key={stat} className="text-xs font-mono font-bold px-2 py-1 bg-slate-100 text-slate-600 rounded uppercase tracking-wider group-hover:bg-primary group-hover:text-white transition-colors">
+                                            {stat}
+                                        </span>
+                                    ))}
                                 </div>
                             </div>
                         ))}
@@ -74,42 +119,16 @@ const Build = () => {
                 </div>
             </section>
 
-            {/* Benefits Section */}
-            <section className="py-20 bg-white border-y border-border">
-                <div className="container-custom">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-6 tracking-[-1px]"><span className="text-accent">Built</span> for Scale</h2>
-                            <p className="text-[17px] text-secondary mb-8">
-                                Whether you're a startup looking to launch your MVP or an enterprise needing to modernize legacy systems, we adapt to your needs.
-                            </p>
-                            <div className="space-y-6">
-                                <div>
-                                    <h3 className="text-xl font-bold text-primary mb-2">For Startups</h3>
-                                    <p className="text-secondary text-sm">Rapid prototyping, MVP development, and scalable architecture that grows with you using agile methodologies (Discover → Design → Build → Launch).</p>
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-primary mb-2">For Enterprises</h3>
-                                    <p className="text-secondary text-sm">Security-first development, system integration, and robust documentation for mission-critical applications.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bg-alt rounded-2xl border border-border min-h-[300px] flex items-center justify-center relative overflow-hidden group">
-                            <img src="/assets/build_engineering.png" alt="Engineering Excellence" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
-                                <p className="text-white font-display font-bold text-xl tracking-wide">Engineering Excellence</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Tech Stack Section */}
-            <section className="py-20 bg-slate-50">
+            {/* The Tech Stack Section */}
+            <section className="py-24 bg-white border-y border-border">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]">   <span className="text-accent">Our</span> Tech Stack</h2>
-                        <p className="text-[17px] text-secondary max-w-[600px] mx-auto">We use modern, battle-tested technologies to build robust applications.</p>
+                        <h2 className="font-display text-[40px] font-black text-primary mb-4">
+                            <span className="text-accent">Our</span> Tech Stack
+                        </h2>
+                        <p className="text-[17px] text-secondary max-w-[600px] mx-auto">
+                            We use modern, battle-tested technologies to build robust applications.
+                        </p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -127,7 +146,10 @@ const Build = () => {
                             { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg' },
                             { name: 'OpenAI', custom: true }
                         ].map((tech, i) => (
-                            <div key={i} className="bg-white border border-border p-6 rounded-xl flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:border-accent hover:shadow-lg hover:-translate-y-1 group">
+                            <div
+                                key={i}
+                                className="bg-white border border-border p-6 rounded-xl flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:border-accent hover:shadow-lg hover:-translate-y-1 group cursor-pointer"
+                            >
                                 <div className="w-12 h-12 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
                                     {tech.custom ? (
                                         <svg viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-primary">
@@ -137,51 +159,59 @@ const Build = () => {
                                         <img src={tech.icon} alt={tech.name} className="w-10 h-10 object-contain" />
                                     )}
                                 </div>
-                                <span className="font-semibold text-primary text-sm">{tech.name}</span>
+                                <span className="font-semibold text-primary text-sm group-hover:text-accent transition-colors">
+                                    {tech.name}
+                                </span>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Process Section */}
-            <section className="py-20">
+            {/* Process: The Pipeline (Light Mode) */}
+            <section className="py-24 bg-slate-50 relative">
                 <div className="container-custom">
-                    <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]"><span className="text-accent">Our</span> Process</h2>
-                    <p className="text-[17px] text-secondary max-w-[600px] mb-12">A streamlined methodology from concept to reality.</p>
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-20">
+                        <div>
+                            <h2 className="font-display text-[40px] font-black mb-2 text-primary"> <span className="text-accent">Our</span> Delivery Pipeline</h2>
+                            <p className="text-secondary">From commit to deployment in 4 stages.</p>
+                        </div>
+                        <div className="hidden md:block">
+                            <div className="flex gap-2 text-xs font-mono text-slate-500 bg-white px-3 py-1 rounded border border-border">
+                                <span>git checkout -b feature/scale</span>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
                         {[
-                            { step: "01", title: "Discover", desc: "We dive deep into your goals, understanding your users and business requirements." },
-                            { step: "02", title: "Design", desc: "Crafting intuitive user experiences and sleek interfaces that engage and convert." },
-                            { step: "03", title: "Build", desc: "Writing clean, scalable code with modern frameworks to bring the design to life." },
-                            { step: "04", title: "Launch", desc: "Rigorous testing and seamless deployment to get your product into the market." }
-                        ].map((item, index) => (
-                            <div key={index} className="bg-white border border-border p-8 rounded-2xl relative overflow-hidden group hover:border-accent transition-all duration-300">
-                                <div className="font-display font-black text-6xl text-slate-100 absolute -top-4 -right-4 transition-colors group-hover:text-accent/5 select-none">{item.step}</div>
-                                <div className="relative z-10">
-                                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center text-accent font-bold mb-4 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-                                        {item.step}
-                                    </div>
-                                    <h3 className="font-bold text-lg text-primary mb-3">{item.title}</h3>
-                                    <p className="text-sm text-secondary leading-relaxed">{item.desc}</p>
+                            { step: "01", name: "Architect", desc: "System Design & Schema" },
+                            { step: "02", name: "Develop", desc: "Agile Sprints & Code" },
+                            { step: "03", name: "Verify", desc: "Automated QA & UAT" },
+                            { step: "04", name: "Deploy", desc: "CI/CD & Monitoring" }
+                        ].map((phase, i) => (
+                            <div key={i} className="group relative border-l border-border p-8 first:border-l-0 hover:bg-white transition-colors">
+                                <div className="text-6xl font-black text-slate-300 mb-6 group-hover:text-accent/50 transition-colors select-none">
+                                    {phase.step}
                                 </div>
+                                <h3 className="text-xl font-bold text-primary mb-2">{phase.name}</h3>
+                                <p className="text-secondary text-sm">{phase.desc}</p>
+                                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-accent group-hover:w-full transition-all duration-500" />
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-[80px] pb-[100px] text-center">
+            {/* CTA */}
+            <section className="py-[100px] text-center bg-white border-t border-border">
                 <div className="container-custom">
-                    <h2 className="font-display text-[36px] font-extrabold text-primary mb-4">Ready to <span className="text-accent">Build</span> Something Great?</h2>
-                    <p className="text-[17px] text-secondary mb-8">Let's turn your vision into reality.</p>
+                    <h2 className="font-display text-[48px] font-black text-primary mb-6">Ready to <span className="text-accent">Build</span> Something Great?</h2>
+                    <p className="text-[18px] text-secondary mb-10 max-w-2xl mx-auto">
+                        Stop worrying about technical debt and scalability. We build software that handles your growth today and tomorrow.
+                    </p>
                     <Link to="/contact" className="btn-dark justify-center">
-                        Start Your Project
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        Initialize Project
                     </Link>
                 </div>
             </section>

@@ -7,28 +7,9 @@ const Contact = () => {
         name: '',
         email: '',
         company: '',
-        service: [],
+        service: '',
         message: ''
     });
-
-    const services = [
-        { id: 'build', label: 'Build (Product)' },
-        { id: 'brand', label: 'Brand (Marketing)' },
-        { id: 'bridge', label: 'Bridge (Talent)' },
-        { id: 'other', label: 'Other' }
-    ];
-
-    const toggleService = (id) => {
-        setFormData(prev => {
-            const isSelected = prev.service.includes(id);
-            return {
-                ...prev,
-                service: isSelected
-                    ? prev.service.filter(s => s !== id)
-                    : [...prev.service, id]
-            };
-        });
-    };
 
     const handleChange = (e) => {
         setFormData({
@@ -80,7 +61,7 @@ const Contact = () => {
                                             onChange={handleChange}
                                             placeholder="John Doe"
                                             required
-                                            className="w-full px-4 py-3 bg-alt border border-transparent rounded-lg focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/5 transition-all outline-none placeholder:text-secondary/50"
+                                            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:border-accent focus:ring-1 focus:ring-accent transition-all outline-none placeholder:text-slate-400"
                                         />
                                     </div>
                                     <div className="space-y-2">
@@ -93,7 +74,7 @@ const Contact = () => {
                                             onChange={handleChange}
                                             placeholder="john@company.com"
                                             required
-                                            className="w-full px-4 py-3 bg-alt border border-transparent rounded-lg focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/5 transition-all outline-none placeholder:text-secondary/50"
+                                            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:border-accent focus:ring-1 focus:ring-accent transition-all outline-none placeholder:text-slate-400"
                                         />
                                     </div>
                                 </div>
@@ -107,43 +88,45 @@ const Contact = () => {
                                         value={formData.company}
                                         onChange={handleChange}
                                         placeholder="Your Company Ltd"
-                                        className="w-full px-4 py-3 bg-alt border border-transparent rounded-lg focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/5 transition-all outline-none placeholder:text-secondary/50"
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:border-accent focus:ring-1 focus:ring-accent transition-all outline-none placeholder:text-slate-400"
                                     />
                                 </div>
 
-                                <div className="space-y-3">
-                                    <label className="text-sm font-semibold text-primary">I'm interested in...</label>
-                                    <div className="flex flex-wrap gap-3">
-                                        {services.map((service) => (
-                                            <button
-                                                key={service.id}
-                                                type="button"
-                                                onClick={() => toggleService(service.id)}
-                                                className={`px - 5 py - 2.5 rounded - full text - sm font - medium transition - all duration - 200 border ${formData.service.includes(service.id)
-                                                    ? 'bg-primary text-white border-primary shadow-lg scale-105'
-                                                    : 'bg-white text-secondary border-border hover:border-accent hover:text-accent'
-                                                    } `}
-                                            >
-                                                {service.label}
-                                            </button>
-                                        ))}
-                                    </div>
+                                <div className="space-y-2">
+                                    <label htmlFor="service" className="text-sm font-semibold text-primary">Service Interest</label>
+                                    <select
+                                        id="service"
+                                        name="service"
+                                        value={formData.service}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:border-accent focus:ring-1 focus:ring-accent transition-all outline-none text-primary"
+                                    >
+                                        <option value="">Select a Service</option>
+                                        <option value="Build">Build (Engineering)</option>
+                                        <option value="Brand">Brand (Strategy)</option>
+                                        <option value="Bridge">Bridge (Talent)</option>
+                                        <option value="Other">Other</option>
+                                    </select>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label htmlFor="message" className="text-sm font-semibold text-primary">Tell us about your project</label>
+                                    <label htmlFor="message" className="text-sm font-semibold text-primary">Message</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows="4"
-                                        placeholder="Describe your requirements, goals, and timeline..."
-                                        className="w-full px-4 py-3 bg-alt border border-transparent rounded-lg focus:bg-white focus:border-accent focus:ring-4 focus:ring-accent/5 transition-all outline-none placeholder:text-secondary/50 resize-y min-h-[120px]"
+                                        placeholder="Tell us about your project..."
+                                        required
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:bg-white focus:border-accent focus:ring-1 focus:ring-accent transition-all outline-none placeholder:text-slate-400 resize-none"
                                     ></textarea>
                                 </div>
 
-                                <button type="submit" className="btn-dark w-full justify-center py-4 text-base group">
+                                <button
+                                    type="submit"
+                                    className="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-accent hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 flex items-center justify-center gap-2 group"
+                                >
                                     Send Message
                                     <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                                 </button>
@@ -191,7 +174,7 @@ const Contact = () => {
                                         </div>
                                         <div>
                                             <span className="block text-sm text-white/50 mb-1">Call us at</span>
-                                            <a href="tel:+1234567890" className="text-lg font-medium hover:text-accent transition-colors">+1 (234) 567-890</a>
+                                            <a href="tel:+1234567890" className="text-lg font-medium hover:text-accent transition-colors">+1 (980) 322-6955</a>
                                         </div>
                                     </div>
 

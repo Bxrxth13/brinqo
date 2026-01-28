@@ -5,143 +5,180 @@ import Layout from '../components/Layout';
 const Bridge = () => {
     return (
         <Layout>
-            <section className="py-20 pb-16 bg-gradient-to-b from-accent/5 to-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
-                    <img src="/assets/bridge_connection.png" alt="" className="w-full h-full object-cover" />
-                </div>
+            {/* Hero Section: Split Layout with Network Visual */}
+            <section className="pt-12 pb-20 lg:pt-20 lg:pb-32 bg-slate-50 relative overflow-hidden">
                 <div className="container-custom relative z-10">
-                    <h1 className="font-display text-[48px] md:text-[64px] font-black leading-[1.1] text-primary mb-6 tracking-[-2px]">
-                        Bridging Talent, Training<br />& <span className="text-accent">Technology</span>
-                    </h1>
-                    <p className="text-[18px] leading-[1.7] text-secondary max-w-[600px]">
-                        Connect with skilled professionals, upskill your team, and
-                        accelerate delivery with our comprehensive talent solutions.
-                    </p>
+                    <div className="flex flex-col lg:flex-row items-start gap-16">
+                        <div className="flex-1 text-center lg:text-left">
+                            <div className="flex items-center gap-3 mb-8 justify-center lg:justify-start">
+                                <div className="h-[1px] w-8 bg-accent"></div>
+                                <span className="text-accent font-mono text-sm tracking-widest uppercase">Global Talent Network</span>
+                            </div>
+                            <h1 className="font-display text-[52px] md:text-[72px] font-black leading-[1.05] text-primary mb-8 tracking-[-2px]">
+                                Bridging <span className="text-accent">Talent</span> & Tech.
+                            </h1>
+                            <p className="text-[19px] leading-[1.6] text-secondary mb-10 max-w-[600px] mx-auto lg:mx-0">
+                                Scale your engineering capacity instantly. We connect you with a pre-vetted network of top 1% developers, ensuring you build faster and smarter.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <Link to="/contact" className="btn-primary">Find Talent</Link>
+                                <Link to="/contact" className="px-8 py-3.5 rounded-lg border border-border bg-white font-bold text-primary hover:border-primary transition-colors text-center">Join Network</Link>
+                            </div>
+                        </div>
+                        <div className="flex-1 w-full max-w-[600px]">
+                            {/* Abstract Network Graphic Placeholder */}
+                            <div className="aspect-square rounded-full bg-white border border-border p-8 relative shadow-2xl animate-pulse-slow">
+                                <div className="absolute inset-0 rounded-full border border-accent/10 animate-[spin_10s_linear_infinite]" />
+                                <div className="absolute inset-[10%] rounded-full border border-primary/5 animate-[spin_15s_linear_infinite_reverse]" />
+                                <img src="/assets/abc.jpeg" alt="Network" className="w-full h-full object-cover rounded-full" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section className="py-20 bg-slate-50">
+            {/* Services: Bento Grid Layout (Unique from List/Row) */}
+            <section className="py-24 bg-white">
                 <div className="container-custom">
-                    <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]">Our Services</h2>
-                    <p className="text-[17px] text-secondary max-w-[600px] mb-12">End-to-end talent and delivery solutions.</p>
+                    <div className="mb-16 text-center">
+                        <span className="text-accent font-bold tracking-widest text-sm uppercase mb-2 block">Our Services</span>
+                        <h2 className="font-display text-[40px] font-black text-primary mb-4">Talent Solutions</h2>
+                        <p className="text-secondary text-lg max-w-2xl mx-auto">Detailed approaches to scaling your workforce with precision and speed.</p>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Service 1: Dedicated Teams */}
+                        <div id="talent-hiring" className="bg-slate-50 rounded-3xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col sm:flex-row h-full">
+                            <div className="w-full sm:w-2/5 relative h-48 sm:h-auto">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dedicated Teams" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div className="w-full sm:w-3/5 p-8 flex flex-col justify-center">
+                                <h3 className="font-display text-2xl font-bold text-primary mb-3">Dedicated Teams</h3>
+                                <p className="text-secondary text-sm leading-relaxed mb-4">
+                                    Build a fully managed remote engineering team that integrates key roles seamlessly with your culture and workflows.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Service 2: Staff Augmentation */}
+                        <div id="team-augmentation" className="bg-slate-50 rounded-3xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col sm:flex-row h-full">
+                            <div className="w-full sm:w-2/5 relative h-48 sm:h-auto">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Staff Augmentation" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div className="w-full sm:w-3/5 p-8 flex flex-col justify-center">
+                                <h3 className="font-display text-2xl font-bold text-primary mb-3">Staff Augmentation</h3>
+                                <p className="text-secondary text-sm leading-relaxed mb-4">
+                                    Fill critical skill gaps instantly with our network of senior freelance experts. Scale up or down on demand.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Service 3: Training & Upskilling */}
+                        <div id="training" className="bg-slate-50 rounded-3xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col sm:flex-row h-full">
+                            <div className="w-full sm:w-2/5 relative h-48 sm:h-auto">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Training" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div className="w-full sm:w-3/5 p-8 flex flex-col justify-center">
+                                <h3 className="font-display text-2xl font-bold text-primary mb-3">Training & Upskilling</h3>
+                                <p className="text-secondary text-sm leading-relaxed mb-4">
+                                    Corporate training programs designed to modernise your team's skills in AI, Cloud, and modern frameworks.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Service 4: Project Delivery */}
+                        <div className="bg-slate-50 rounded-3xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col sm:flex-row h-full">
+                            <div className="w-full sm:w-2/5 relative h-48 sm:h-auto">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project Delivery" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                            </div>
+                            <div className="w-full sm:w-3/5 p-8 flex flex-col justify-center">
+                                <h3 className="font-display text-2xl font-bold text-primary mb-3">Project Delivery</h3>
+                                <p className="text-secondary text-sm leading-relaxed mb-4">
+                                    We take full ownership of critical tech projects, delivering end-to-end execution from discovery to deployment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Dashboard Stats & Stack */}
+            <section className="py-24 bg-slate-50 border-y border-border">
+                <div className="container-custom">
+                    <div className="text-center mb-16">
+                        <h2 className="font-display text-[40px] font-black text-primary mb-4">The Network Effect</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left: Metric Cards (Black & Red Design) */}
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-primary p-8 rounded-2xl text-white flex flex-col justify-between aspect-[4/3] shadow-xl">
+                                <div className="text-5xl font-black tracking-tighter">500+</div>
+                                <div className="text-white/70 font-medium">Vetted Engineers</div>
+                            </div>
+                            <div className="bg-white p-8 rounded-2xl border border-border flex flex-col justify-between aspect-[4/3]">
+                                <div className="text-5xl font-black text-primary tracking-tighter">48h</div>
+                                <div className="text-secondary font-medium">Avg. Deployment</div>
+                            </div>
+                            <div className="bg-accent p-8 rounded-2xl text-white flex flex-col justify-between aspect-[4/3] shadow-xl">
+                                <div className="text-5xl font-black tracking-tighter">20+</div>
+                                <div className="text-white/90 font-medium">Global Locations</div>
+                            </div>
+                            <div className="bg-white p-8 rounded-2xl border border-border flex flex-col justify-between aspect-[4/3]">
+                                <div className="text-5xl font-black text-primary tracking-tighter">98%</div>
+                                <div className="text-secondary font-medium">Retention Rate</div>
+                            </div>
+                        </div>
+
+                        {/* Right: Logos/Ecosystem */}
+                        <div className="bg-white rounded-3xl p-10 border border-border h-full">
+                            <h3 className="font-bold text-xl text-primary mb-8 px-2">Integrated with your workflow</h3>
+                            <div className="grid grid-cols-3 gap-8">
+                                {[
+                                    { name: 'github', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' },
+                                    { name: 'slack', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg' },
+                                    { name: 'jira', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg' },
+                                    { name: 'zoom', icon: 'https://svgl.app/library/zoom.svg' },
+                                    { name: 'trello', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg' },
+                                    { name: 'figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg' }
+                                ].map(tool => (
+                                    <div key={tool.name} className="aspect-square flex items-center justify-center bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
+                                        <img src={tool.icon} className="w-10 h-10 opacity-80 hover:opacity-100 transition-opacity" alt={tool.name} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Process: Horizontal Flow */}
+            <section className="py-24 bg-white">
+                <div className="container-custom">
+                    <h2 className="font-display text-[32px] md:text-[40px] font-black text-primary mb-16 text-center">How <span className="text-accent">We</span> Match</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                         {[
-                            { title: "Talent Sourcing", desc: "We find top-tier developers, designers, and product managers who fit your specific tech stack and culture.", icon: <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /> },
-                            { title: "Team Augmentation", desc: "Scale your existing team quickly with skilled professionals who integrate seamlessly into your workflow.", icon: <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> },
-                            { title: "Training & Upskilling", desc: "Customized training programs to bridge skill gaps and keep your team ahead of the curve.", icon: <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /> },
-                            { title: "Project Delivery Support", desc: "End-to-end project management and delivery assurance for critical initiatives.", icon: <path d="M9 11l3 3L22 4" /> },
-                        ].map((item, index) => (
-                            <div key={index} className="bg-white border border-border rounded-xl p-8 transition-all duration-300 hover:border-accent hover:-translate-y-1 hover:shadow-lg group">
-                                <div className="w-12 h-12 bg-[#FFE8EC] rounded-[10px] flex items-center justify-center text-accent mb-5">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        {item.icon}
-                                    </svg>
-                                </div>
-                                <h3 className="font-display text-lg font-bold text-primary mb-2">{item.title}</h3>
-                                <p className="text-sm text-secondary leading-[1.6]">{item.desc}</p>
+                            { step: "01", title: "Profile", desc: "We analyze your tech stack and culture needs." },
+                            { step: "02", title: "Vet", desc: "Our AI + Human process filters the top 1%." },
+                            { step: "03", title: "Match", desc: "You interview pre-selected, qualified candidates." },
+                            { step: "04", title: "Deploy", desc: "Instant onboarding with our HR & legal framework." }
+                        ].map((item, i) => (
+                            <div key={i} className="relative p-6 rounded-2xl border border-dashed border-border hover:border-accent hover:bg-accent/5 transition-all group text-center">
+                                <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4 group-hover:bg-accent transition-colors shadow-lg shadow-primary/20">{item.step}</div>
+                                <h3 className="font-bold text-lg text-primary mb-2">{item.title}</h3>
+                                <p className="text-sm text-secondary">{item.desc}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Who This Is For Section */}
-            <section className="py-20 border-t border-border">
+            <section className="py-[100px] text-center bg-slate-50">
                 <div className="container-custom">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                        <div>
-                            <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-6 tracking-[-1px]">Who We Help</h2>
-                            <p className="text-[17px] text-secondary leading-relaxed mb-8">
-                                Our talent network is designed to be flexible, supporting organizations at every stage of growth.
-                            </p>
-                            <div className="space-y-6">
-                                <div className="flex gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-alt flex items-center justify-center shrink-0">🚀</div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-primary">Startups</h3>
-                                        <p className="text-sm text-secondary">Access senior talent without the overhead. Scale up for launch, scale down for maintenance.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-alt flex items-center justify-center shrink-0">🏢</div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-primary">Enterprises</h3>
-                                        <p className="text-sm text-secondary">Augment your core teams with specialized skills for specific projects or digital transformation initiatives.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-alt flex items-center justify-center shrink-0">🤝</div>
-                                    <div>
-                                        <h3 className="font-bold text-lg text-primary">Agencies</h3>
-                                        <p className="text-sm text-secondary">White-label delivery support to help you say "yes" to more client work.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bg-alt rounded-2xl border border-border h-[400px] flex items-center justify-center relative overflow-hidden group">
-                            <img src="/assets/bridge_connection.png" alt="Human Connection" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
-                                <p className="text-white font-display font-bold text-xl tracking-wide">Human Connection</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Talent Metrics */}
-            <section className="py-20 border-t border-b border-border">
-                <div className="container-custom">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="flex-1">
-                            <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-6 tracking-[-1px]">Global Talent Network</h2>
-                            <p className="text-[17px] text-secondary leading-relaxed mb-8">
-                                Access a pre-vetted pool of top-tier developers, designers, and product managers ready to join your team.
-                            </p>
-                            <ul className="space-y-4">
-                                {['Top 1% vetted talent', 'Timezone aligned support', 'Seamless onboarding process'].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-3">
-                                        <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
-                                        </div>
-                                        <span className="text-primary font-medium">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="flex-1 w-full">
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="bg-primary p-8 rounded-2xl text-white">
-                                    <div className="text-4xl font-bold mb-2">500+</div>
-                                    <div className="text-sm opacity-60">Engineers</div>
-                                </div>
-                                <div className="bg-[#f0f0f0] p-8 rounded-2xl">
-                                    <div className="text-4xl font-bold text-primary mb-2">48h</div>
-                                    <div className="text-sm text-secondary">Hiring Time</div>
-                                </div>
-                                <div className="bg-[#f0f0f0] p-8 rounded-2xl">
-                                    <div className="text-4xl font-bold text-primary mb-2">98%</div>
-                                    <div className="text-sm text-secondary">Retention Rate</div>
-                                </div>
-                                <div className="bg-accent p-8 rounded-2xl text-white">
-                                    <div className="text-4xl font-bold mb-2">20+</div>
-                                    <div className="text-sm opacity-80">Countries</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-[80px] pb-[100px] text-center">
-                <div className="container-custom">
-                    <h2 className="font-display text-[36px] font-extrabold text-primary mb-4">Ready to Bridge the Gap?</h2>
-                    <p className="text-[17px] text-secondary mb-8">Let's build your dream team together.</p>
+                    <h2 className="font-display text-[48px] font-black text-primary mb-4">Ready to <span className="text-accent">Bridge</span> the Gap?</h2>
+                    <p className="text-[18px] text-secondary mb-8">Access the top 1% of global engineering talent.</p>
                     <Link to="/contact" className="btn-dark justify-center">
-                        Bridge With Us
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                        View Available Talent
                     </Link>
                 </div>
             </section>

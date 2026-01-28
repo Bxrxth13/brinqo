@@ -4,7 +4,7 @@ import { Send, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-primary text-white pt-0 pb-6 overflow-hidden relative">
+        <footer className="bg-black text-white pt-0 pb-6 overflow-hidden relative">
             {/* Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
             <div className="absolute -top-[200px] -right-[200px] w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -46,25 +46,25 @@ const Footer = () => {
                     <div>
                         <h4 className="font-display text-xs font-bold text-white uppercase tracking-wider mb-4">Build</h4>
                         <ul className="space-y-2">
-                            <li><Link to="/build" className="text-white/60 hover:text-accent transition-colors text-sm">Digital Products</Link></li>
-                            <li><Link to="/build" className="text-white/60 hover:text-accent transition-colors text-sm">Mobile Apps</Link></li>
-                            <li><Link to="/build" className="text-white/60 hover:text-accent transition-colors text-sm">AI Solutions</Link></li>
+                            <li><Link to="/build#services" className="text-white/60 hover:text-accent transition-colors text-sm">Web Platforms</Link></li>
+                            <li><Link to="/build#services" className="text-white/60 hover:text-accent transition-colors text-sm">Mobile Apps</Link></li>
+                            <li><Link to="/build#services" className="text-white/60 hover:text-accent transition-colors text-sm">AI Solutions</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-display text-xs font-bold text-white uppercase tracking-wider mb-4">Brand</h4>
                         <ul className="space-y-2">
-                            <li><Link to="/brand" className="text-white/60 hover:text-accent transition-colors text-sm">Strategy</Link></li>
-                            <li><Link to="/brand" className="text-white/60 hover:text-accent transition-colors text-sm">Identity</Link></li>
-                            <li><Link to="/brand" className="text-white/60 hover:text-accent transition-colors text-sm">Marketing</Link></li>
+                            <li><Link to="/brand#strategy" className="text-white/60 hover:text-accent transition-colors text-sm">Strategy</Link></li>
+                            <li><Link to="/brand#identity" className="text-white/60 hover:text-accent transition-colors text-sm">Identity</Link></li>
+                            <li><Link to="/brand#marketing" className="text-white/60 hover:text-accent transition-colors text-sm">Marketing</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-display text-xs font-bold text-white uppercase tracking-wider mb-4">Bridge</h4>
                         <ul className="space-y-2">
-                            <li><Link to="/bridge" className="text-white/60 hover:text-accent transition-colors text-sm">Talent Hiring</Link></li>
-                            <li><Link to="/bridge" className="text-white/60 hover:text-accent transition-colors text-sm">Team Augmentation</Link></li>
-                            <li><Link to="/bridge" className="text-white/60 hover:text-accent transition-colors text-sm">Training</Link></li>
+                            <li><Link to="/bridge#talent-hiring" className="text-white/60 hover:text-accent transition-colors text-sm">Talent Hiring</Link></li>
+                            <li><Link to="/bridge#team-augmentation" className="text-white/60 hover:text-accent transition-colors text-sm">Team Augmentation</Link></li>
+                            <li><Link to="/bridge#training" className="text-white/60 hover:text-accent transition-colors text-sm">Training</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -82,15 +82,19 @@ const Footer = () => {
                     <p className="text-white/40 text-sm">© 2024 Brinqo. All rights reserved.</p>
 
                     <div className="flex items-center gap-6">
-                        <a href="#" className="text-white/40 hover:text-accent transition-colors"><Twitter className="w-5 h-5" /></a>
+                        <a href="#" className="text-white/40 hover:text-accent transition-colors">
+                            {/* X Logo (formerly Twitter) */}
+                            <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
                         <a href="#" className="text-white/40 hover:text-accent transition-colors"><Linkedin className="w-5 h-5" /></a>
                         <a href="#" className="text-white/40 hover:text-accent transition-colors"><Instagram className="w-5 h-5" /></a>
-                        <a href="#" className="text-white/40 hover:text-accent transition-colors"><Github className="w-5 h-5" /></a>
                     </div>
 
                     <div className="flex gap-6">
-                        <Link to="#" className="text-white/40 text-sm hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link to="#" className="text-white/40 text-sm hover:text-white transition-colors">Terms of Service</Link>
+                        <Link to="/privacy-policy" className="text-white/40 text-sm hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-of-service" className="text-white/40 text-sm hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

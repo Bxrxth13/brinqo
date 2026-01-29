@@ -18,7 +18,7 @@ const Brand = () => {
                                 <span className="text-accent font-mono text-sm tracking-widest uppercase">Brand & Strategy</span>
                             </div>
                             <h1 className="font-display text-[48px] md:text-[72px] lg:text-[80px] font-black leading-[1.05] text-primary mb-8 tracking-[-3px]">
-                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-red-600">  Build</span> Brands That People Trust.
+                                 Build <   span className="text-accent">Brands</span>  That People <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-slate-500">Trust</span>.
                             </h1>
                             <p className="text-[18px] md:text-[20px] leading-[1.7] text-secondary max-w-[580px] mb-10">
                                 We don't just design logos; we build belief systems. Connect with your audience on a visceral level through strategic storytelling and world-class design.

@@ -15,7 +15,7 @@ const Bridge = () => {
                                 <span className="text-accent font-mono text-sm tracking-widest uppercase">Global Talent Network</span>
                             </div>
                             <h1 className="font-display text-[52px] md:text-[72px] font-black leading-[1.05] text-primary mb-8 tracking-[-2px]">
-                                Bridging <span className="text-accent">Talent</span> & Tech.
+                                Bridging <span className="text-accent">Talent</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-slate-500">& Tech.</span>
                             </h1>
                             <p className="text-[19px] leading-[1.6] text-secondary mb-10 max-w-[600px] mx-auto lg:mx-0">
                                 Scale your engineering capacity instantly. We connect you with a pre-vetted network of top 1% developers, ensuring you build faster and smarter.

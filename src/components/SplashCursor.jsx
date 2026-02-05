@@ -560,12 +560,12 @@ function SplashCursor({
             else return { width: min, height: max };
         }
 
-        function generateColor() {
-            // Use the red accent color #e32e4d (Normalized: R=0.89, G=0.18, B=0.30)
+        function generateColor() 
+        {
             return {
-                r: 0.89 + (Math.random() - 0.5) * 0.1,
-                g: 0.18 + (Math.random() - 0.5) * 0.1,
-                b: 0.30 + (Math.random() - 0.5) * 0.1
+                r: 0.89,
+                // g: 0.00,
+                // b: 0.00
             };
         }
 
@@ -702,7 +702,8 @@ function SplashCursor({
             p.deltaX = 0; p.deltaY = 0; p.color = generateColor();
 
             const c = generateColor();
-            splat(p.texcoordX, p.texcoordY, 10 * (Math.random() - 0.5), 30 * (Math.random() - 0.5), { r: c.r * 10, g: c.g * 10, b: c.b * 10 });
+            // Removed 10x multiplier to prevent white blowout
+            splat(p.texcoordX, p.texcoordY, 10 * (Math.random() - 0.5), 30 * (Math.random() - 0.5), c);
         }
 
         function handleMouseMove(e) {

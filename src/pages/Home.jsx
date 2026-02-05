@@ -2,11 +2,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
+import SplashCursor from '../components/SplashCursor';
 
 const Home = () => {
     return (
         <Layout>
             <div className="hero pt-20 pb-24 bg-white relative overflow-hidden">
+                <SplashCursor
+                    SIM_RESOLUTION={128}
+                    DYE_RESOLUTION={1440}
+                    DENSITY_DISSIPATION={3.5}
+                    VELOCITY_DISSIPATION={2}
+                    PRESSURE={0.1}
+                    CURL={3}
+                    SPLAT_RADIUS={0.2}
+                    SPLAT_FORCE={6000}
+                    COLOR_UPDATE_SPEED={10}
+                />
                 <div className="absolute top-0 right-0 w-[60%] h-full opacity-10 pointer-events-none select-none">
                     {/* Image Style: Minimal, abstract tech visuals, modern gradients, human + technology blend */}
                     {/* Keywords: abstract technology flow, digital transformation, startup team collaboration, AI abstract visuals */}

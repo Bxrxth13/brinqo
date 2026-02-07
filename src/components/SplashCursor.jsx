@@ -563,9 +563,9 @@ function SplashCursor({
         function generateColor() 
         {
             return {
-                r: 0.89,
-                // g: 0.00,
-                // b: 0.00
+                r: 0.9,
+                g: 0.0,
+                b: 0.0
             };
         }
 

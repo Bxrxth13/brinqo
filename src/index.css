@@ -77,11 +77,14 @@
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased selection:bg-accent/15 selection:text-accent;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    overflow-x: hidden;
+    width: 100%;
   }
 
   /* Sleek Scrollbar */

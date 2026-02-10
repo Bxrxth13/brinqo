@@ -23,7 +23,7 @@ const Navbar = () => {
     }, [isMobileMenuOpen]);
 
     return (
-        <header className="py-4 md:py-6 bg-white/90 backdrop-blur-md border-b border-[#f0f0f0] sticky top-0 z-50 transition-all duration-300">
+        <header className="py-4 md:py-6 bg-white border-b border-[#f0f0f0] sticky top-0 z-50 transition-all duration-300">
             <div className="container-custom flex items-center justify-between">
                 <Link to="/" className="font-display text-2xl font-bold text-primary tracking-tighter decoration-0 z-50 relative">
                     Brinqo<span className="text-accent">.</span>
@@ -73,18 +73,7 @@ const Navbar = () => {
                 ></div>
 
                 {/* Mobile Menu Panel */}
-                <div className={`fixed top-0 right-0 h-full w-[280px] bg-white z-40 shadow-2xl flex flex-col transition-transform duration-300 ease-out md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                    {/* Close Button */}
-                    <div className="flex justify-end p-6">
-                        <button
-                            className="p-2 text-primary hover:text-accent transition-colors"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="stroke-current">
-                                <path d="M6 18L18 6M6 6L18 18" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
+                <div className={`fixed top-0 right-0 h-full w-[280px] bg-white z-40 shadow-2xl flex flex-col transition-transform duration-300 ease-out md:hidden pt-24 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
                     {/* Navigation Links */}
                     <nav className="flex flex-col gap-2 px-6">

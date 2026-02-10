@@ -129,7 +129,7 @@ const About = () => {
                                 title: "Integrity",
                                 desc: "We build trust through transparency and honest communication.",
                                 icon: "🤝",
-                            
+
                             },
                             {
                                 title: "Excellence",
@@ -155,7 +155,7 @@ const About = () => {
                                 <div className="relative bg-white rounded-3xl border-2 border-border hover:border-accent/50 transition-all duration-300 p-8 h-full flex flex-col hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
 
                                     {/* Background gradient blob */}
-                                    <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${val.bgGradient} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                                    <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                                     {/* Large background number */}
                                     <div className="absolute top-4 right-4 text-7xl font-black text-slate-100 group-hover:text-accent/5 transition-colors select-none pointer-events-none">
@@ -166,7 +166,7 @@ const About = () => {
                                     <div className="relative z-10 flex flex-col h-full">
                                         {/* Icon badge */}
                                         <div className="mb-6">
-                                            <div className={`w-20 h-20 bg-gradient-to-br ${val.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                                            <div className="w-20 h-20 bg-gradient-to-br from-accent to-red-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                                                 <span className="text-4xl">{val.icon}</span>
                                             </div>
                                         </div>

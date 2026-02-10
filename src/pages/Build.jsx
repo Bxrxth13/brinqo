@@ -168,35 +168,111 @@ const Build = () => {
                 </div>
             </section>
 
-            {/* Process: The Pipeline (Light Mode) */}
-            <section className="py-24 bg-slate-50 relative">
-                <div className="container-custom">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-20">
+            {/* Process: The Pipeline - Enhanced Timeline Design */}
+            <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
+                <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+
+                <div className="container-custom relative z-10">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-4">
                         <div>
-                            <h2 className="font-display text-[40px] font-black mb-2 text-primary"> <span className="text-accent">Our</span> Delivery Pipeline</h2>
-                            <p className="text-secondary">From commit to deployment in 4 stages.</p>
+                            <h2 className="font-display text-[40px] font-black mb-2 text-primary"><span className="text-accent">Our</span> Delivery Pipeline</h2>
+                            <p className="text-secondary text-lg">From commit to deployment in 4 stages.</p>
                         </div>
                         <div className="hidden md:block">
-                            <div className="flex gap-2 text-xs font-mono text-slate-500 bg-white px-3 py-1 rounded border border-border">
-                                <span>git checkout -b feature/scale</span>
+                            <div className="flex gap-2 text-xs font-mono text-slate-500 bg-white px-4 py-2 rounded-lg border border-border shadow-sm">
+                                <span className="text-accent">git</span> checkout -b feature/scale
                             </div>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
+                    <p className="text-secondary text-center mb-16 max-w-2xl mx-auto">Our proven development pipeline ensures quality, speed, and scalability at every step</p>
+
+                    {/* Desktop Timeline */}
+                    <div className="hidden md:block relative">
+                        {/* Connecting Line */}
+                        <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-accent/20 via-accent/50 to-accent/20"
+                            style={{ left: 'calc(12.5% + 40px)', right: 'calc(12.5% + 40px)' }} />
+
+                        <div className="grid grid-cols-4 gap-8">
+                            {[
+                                { step: "01", name: "Architect", desc: "System Design & Schema", icon: "🏗️", color: "from-blue-500 to-blue-600" },
+                                { step: "02", name: "Develop", desc: "Agile Sprints & Code", icon: "💻", color: "from-purple-500 to-purple-600" },
+                                { step: "03", name: "Verify", desc: "Automated QA & UAT", icon: "✅", color: "from-green-500 to-green-600" },
+                                { step: "04", name: "Deploy", desc: "CI/CD & Monitoring", icon: "🚀", color: "from-accent to-red-600" }
+                            ].map((phase, i) => (
+                                <div key={i} className="relative group">
+                                    {/* Arrow between steps */}
+                                    {i < 3 && (
+                                        <div className="hidden md:block absolute top-20 -right-8 z-20 transform translate-x-1/2">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" className="text-accent/60 group-hover:text-accent transition-colors">
+                                                <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                                            </svg>
+                                        </div>
+                                    )}
+
+                                    {/* Step Card */}
+                                    <div className="relative bg-white rounded-2xl border-2 border-border hover:border-accent transition-all duration-300 p-8 group-hover:shadow-2xl group-hover:-translate-y-2">
+                                        {/* Step Number Badge */}
+                                        <div className={`absolute -top-4 left-6 w-16 h-16 bg-gradient-to-br ${phase.color} text-white rounded-2xl flex items-center justify-center font-display font-black text-xl shadow-lg transition-all duration-300 group-hover:scale-110`}>
+                                            {phase.step}
+                                        </div>
+
+                                        {/* Large Number Background */}
+                                        <div className="absolute top-4 right-4 text-7xl font-black text-slate-100 group-hover:text-accent/10 transition-colors select-none pointer-events-none">
+                                            {phase.step}
+                                        </div>
+
+                                        {/* Icon/Emoji */}
+                                        <div className="text-5xl mb-6 mt-8 group-hover:scale-110 transition-transform">
+                                            {phase.icon}
+                                        </div>
+
+                                        {/* Content */}
+                                        <h3 className="font-display font-bold text-xl text-primary mb-3 group-hover:text-accent transition-colors relative z-10">
+                                            {phase.name}
+                                        </h3>
+                                        <p className="text-sm text-secondary leading-relaxed relative z-10">
+                                            {phase.desc}
+                                        </p>
+
+                                        {/* Progress indicator */}
+                                        <div className="mt-6 h-1 w-0 bg-gradient-to-r from-accent to-accent/50 group-hover:w-full transition-all duration-500 rounded-full" />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Mobile Timeline (Vertical) */}
+                    <div className="md:hidden space-y-8 relative">
+                        {/* Vertical connecting line */}
+                        <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-gradient-to-b from-accent/20 via-accent/50 to-accent/20" />
+
                         {[
-                            { step: "01", name: "Architect", desc: "System Design & Schema" },
-                            { step: "02", name: "Develop", desc: "Agile Sprints & Code" },
-                            { step: "03", name: "Verify", desc: "Automated QA & UAT" },
-                            { step: "04", name: "Deploy", desc: "CI/CD & Monitoring" }
+                            { step: "01", name: "Architect", desc: "System Design & Schema", icon: "🏗️", color: "from-blue-500 to-blue-600" },
+                            { step: "02", name: "Develop", desc: "Agile Sprints & Code", icon: "💻", color: "from-purple-500 to-purple-600" },
+                            { step: "03", name: "Verify", desc: "Automated QA & UAT", icon: "✅", color: "from-green-500 to-green-600" },
+                            { step: "04", name: "Deploy", desc: "CI/CD & Monitoring", icon: "🚀", color: "from-accent to-red-600" }
                         ].map((phase, i) => (
-                            <div key={i} className="group relative border-l border-border p-8 first:border-l-0 hover:bg-white transition-colors">
-                                <div className="text-6xl font-black text-slate-300 mb-6 group-hover:text-accent/50 transition-colors select-none">
+                            <div key={i} className="relative pl-20">
+                                {/* Step Number Badge */}
+                                <div className={`absolute left-0 w-16 h-16 bg-gradient-to-br ${phase.color} text-white rounded-2xl flex items-center justify-center font-display font-black text-xl shadow-lg z-10`}>
                                     {phase.step}
                                 </div>
-                                <h3 className="text-xl font-bold text-primary mb-2">{phase.name}</h3>
-                                <p className="text-secondary text-sm">{phase.desc}</p>
-                                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-accent group-hover:w-full transition-all duration-500" />
+
+                                {/* Card */}
+                                <div className="bg-white rounded-2xl border-2 border-border p-6 hover:border-accent hover:shadow-xl transition-all">
+                                    <div className="text-4xl mb-4">{phase.icon}</div>
+                                    <h3 className="font-display font-bold text-lg text-primary mb-2">
+                                        {phase.name}
+                                    </h3>
+                                    <p className="text-sm text-secondary leading-relaxed">
+                                        {phase.desc}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>

@@ -259,16 +259,18 @@ const Home = () => {
 
                 </section>
                 {/* 3. WHY BRINQO - ADVANTAGES SECTION */}
-                <section className="py-16 lg:py-32 relative overflow-hidden">
+                <section className="py-16 lg:py-32 relative overflow-hidden bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-950 dark:to-zinc-900">
                     {/* Background Pattern */}
                     <div className="absolute inset-0 -z-10">
                         <div className="absolute top-20 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl opacity-50 sm:opacity-100" />
                         <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl opacity-50 sm:opacity-100" />
+                        {/* Grid Pattern */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
                     </div>
 
                     <div className="container-custom">
                         <motion.div
-                            className="text-center mb-12 lg:mb-16"
+                            className="text-center mb-12 lg:mb-20"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, margin: "-100px" }}
@@ -293,72 +295,86 @@ const Home = () => {
                             </motion.p>
                         </motion.div>
 
-                        <motion.div
-                            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-100px" }}
-                            variants={staggerContainer}
-                        >
-                            {reasons.map((reason, index) => (
-                                <motion.div
-                                    key={index}
-                                    variants={fadeInUp}
-                                    className="group relative"
-                                >
-                                    {/* Main Card */}
-                                    <div className="relative h-full overflow-visible md:overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800 p-6 lg:p-8 border border-zinc-200/50 dark:border-zinc-700/30 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 hover:-translate-y-2">
+                        {/* Split Layout - Stats + Features */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-                                        {/* Animated gradient overlay on hover */}
-                                        <div className="hidden md:block absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-accent/10 group-hover:to-accent/5 transition-all duration-500" />
-
-                                        {/* Floating Stat Badge */}
+                            {/* Left Side - Animated Stats */}
+                            <motion.div
+                                className="relative"
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={staggerContainer}
+                            >
+                                <div className="grid grid-cols-2 gap-6">
+                                    {reasons.map((reason, index) => (
                                         <motion.div
-                                            className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 z-10"
-                                            whileHover={{ scale: 1.1, rotate: 5 }}
-                                            transition={{ type: "spring", stiffness: 300 }}
+                                            key={index}
+                                            variants={fadeInUp}
+                                            className="group relative bg-white dark:bg-zinc-800/50 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-700/50 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                                         >
-                                            <div className="relative">
-                                                <div className="absolute inset-0 bg-accent blur-xl opacity-40 group-hover:opacity-70 transition-opacity" />
-                                                <div className="relative bg-gradient-to-br from-accent to-accent/80 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-2xl shadow-lg text-center">
-                                                    <div className="font-display text-xl sm:text-2xl font-black leading-none mb-0.5">{reason.stat}</div>
-                                                    <div className="text-[9px] sm:text-[10px] font-medium uppercase tracking-wide opacity-90 whitespace-nowrap">{reason.statLabel}</div>
+                                            {/* Stat Number */}
+                                            <div className="mb-3">
+                                                <div className="font-display text-4xl lg:text-5xl font-black text-accent leading-none mb-1">
+                                                    {reason.stat}
+                                                </div>
+                                                <div className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
+                                                    {reason.statLabel}
                                                 </div>
                                             </div>
+
+                                            {/* Icon */}
+                                            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-accent/10 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                                                <reason.icon className="w-6 h-6 text-accent group-hover:text-white transition-colors" />
+                                            </div>
+
+                                            {/* Decorative corner */}
+                                            <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-accent/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity" />
                                         </motion.div>
+                                    ))}
+                                </div>
+
+                                {/* Decorative Element */}
+                                <div className="hidden lg:block absolute -bottom-8 -right-8 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
+                            </motion.div>
+
+                            {/* Right Side - Feature List */}
+                            <motion.div
+                                className="space-y-6"
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, margin: "-100px" }}
+                                variants={staggerContainer}
+                            >
+                                {reasons.map((reason, index) => (
+                                    <motion.div
+                                        key={index}
+                                        variants={fadeInUp}
+                                        className="group flex gap-4 items-start"
+                                    >
+                                        {/* Number Badge */}
+                                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent/10 group-hover:bg-accent flex items-center justify-center transition-all duration-300">
+                                            <span className="font-display font-bold text-accent group-hover:text-white transition-colors">
+                                                {String(index + 1).padStart(2, '0')}
+                                            </span>
+                                        </div>
 
                                         {/* Content */}
-                                        <div className="relative z-10">
-                                            {/* Icon */}
-                                            <div className="mb-6 inline-flex">
-                                                <div className="relative">
-                                                    <div className="absolute inset-0 bg-accent/20 blur-xl group-hover:blur-2xl transition-all" />
-                                                    <div className="relative bg-white dark:bg-zinc-800 p-4 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                                                        <reason.icon className="w-8 h-8 text-accent" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            {/* Title */}
-                                            <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-zinc-900 dark:text-white group-hover:text-accent transition-colors duration-300 pr-12 sm:pr-0">
+                                        <div className="flex-1">
+                                            <h3 className="font-display text-xl font-bold mb-2 text-zinc-900 dark:text-white group-hover:text-accent transition-colors">
                                                 {reason.title}
                                             </h3>
-
-                                            {/* Description */}
-                                            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm sm:text-[15px]">
+                                            <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
                                                 {reason.description}
                                             </p>
 
-                                            {/* Decorative line */}
-                                            <div className="mt-6 h-1 w-0 bg-gradient-to-r from-accent to-accent/50 group-hover:w-full transition-all duration-500 rounded-full" />
+                                            {/* Progress line */}
+                                            <div className="mt-3 h-0.5 w-0 bg-gradient-to-r from-accent to-accent/50 group-hover:w-full transition-all duration-500" />
                                         </div>
-
-                                        {/* Bottom right corner decoration */}
-                                        <div className="hidden md:block absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-tl-full" />
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
+                        </div>
                     </div>
                 </section>
 

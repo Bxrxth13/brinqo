@@ -23,7 +23,7 @@ const Navbar = () => {
     }, [isMobileMenuOpen]);
 
     return (
-        <header className="py-6 bg-white border-b border-[#f0f0f0] relative z-50">
+        <header className="py-4 md:py-6 bg-white/90 backdrop-blur-md border-b border-[#f0f0f0] sticky top-0 z-50 transition-all duration-300">
             <div className="container-custom flex items-center justify-between">
                 <Link to="/" className="font-display text-2xl font-bold text-primary tracking-tighter decoration-0 z-50 relative">
                     Brinqo<span className="text-accent">.</span>

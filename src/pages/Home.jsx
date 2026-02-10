@@ -124,7 +124,7 @@ const Home = () => {
             <div ref={targetRef} className="relative bg-zinc-50 dark:bg-zinc-950 text-foreground overflow-hidden selection:bg-accent selection:text-white">
 
                 {/* 1. HERO SECTION & SERVICES MERGED */}
-                <section className="relative min-h-screen py-20 lg:py-0 flex items-center justify-center overflow-hidden">
+                <section className="relative min-h-screen pt-20 lg:pt-24 pb-10 flex items-start justify-center overflow-hidden">
                     {/* Background Elements */}
                     <div className="absolute inset-0 z-0">
                         <SplashCursor
@@ -173,7 +173,7 @@ const Home = () => {
                             </motion.div>
                         </motion.div>
 
-                        {/* RIGHT: Services Grid (Moved from below) */}
+                        {/* Cards */}
                         <motion.div
                             className="lg:col-span-7 h-full w-full flex items-center"
                             initial={{ opacity: 0, x: 50 }}
@@ -226,7 +226,7 @@ const Home = () => {
                                         </div>
                                         <div>
                                             <h3 className="font-display text-2xl font-bold mb-1 text-zinc-900 dark:text-white group-hover:text-white transition-colors">BRAND</h3>
-                                            <p className="text-zinc-500 dark:text-zinc-400 text-xs group-hover:text-white/80 transition-colors">Identity & Positioning.</p>
+                                            <p className="text-zinc-500 dark:text-zinc-400 text-xs group-hover:text-white/80 transition-colors">Marketing, identity, positioning, and growth</p>
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +249,7 @@ const Home = () => {
                                         </div>
                                         <div>
                                             <h3 className="font-display text-2xl font-bold mb-1 group-hover:text-white transition-colors">BRIDGE</h3>
-                                            <p className="text-white/60 text-xs group-hover:text-white/80 transition-colors">Talent & Delivery.</p>
+                                            <p className="text-white/60 text-xs group-hover:text-white/80 transition-colors">Talent,training & Delivery.</p>
                                         </div>
                                     </div>
                                 </div>

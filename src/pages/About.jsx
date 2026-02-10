@@ -110,24 +110,83 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Core Values */}
-            <section className="py-[100px] bg-white border-t border-border">
-                <div className="container-custom">
-                    <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-12 tracking-[-1px] text-center">Our Core Values</h2>
+            {/* Core Values - Enhanced Design */}
+            <section className="py-[100px] bg-gradient-to-br from-slate-50 via-white to-slate-50 border-t border-border relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(239,68,68,0.05),transparent_50%),radial-gradient(circle_at_80%_70%,rgba(15,23,42,0.03),transparent_50%)]" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="container-custom relative z-10">
+                    <div className="text-center mb-16">
+                        <span className="text-accent font-bold tracking-widest text-sm uppercase mb-2 block">What We Stand For</span>
+                        <h2 className="font-display text-[32px] md:text-[40px] font-extrabold text-primary mb-4 tracking-[-1px]">Our Core Values</h2>
+                        <p className="text-secondary text-lg max-w-2xl mx-auto">The principles that guide every decision we make and every solution we deliver</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { title: "Integrity", desc: "We build trust through transparency and honest communication." },
-                            { title: "Excellence", desc: "We ship world-class quality in everything we do." },
-                            { title: "Adaptability", desc: "We evolve quickly to meet new challenges and technologies." },
-                            { title: "Impact", desc: "We focus on outcomes that move the needle for your business." }
+                            {
+                                title: "Integrity",
+                                desc: "We build trust through transparency and honest communication.",
+                                icon: "🤝",
+                            
+                            },
+                            {
+                                title: "Excellence",
+                                desc: "We ship world-class quality in everything we do.",
+                                icon: "⭐",
+                            },
+                            {
+                                title: "Adaptability",
+                                desc: "We evolve quickly to meet new challenges and technologies.",
+                                icon: "🔄",
+                            },
+                            {
+                                title: "Impact",
+                                desc: "We focus on outcomes that move the needle for your business.",
+                                icon: "🎯",
+                            }
                         ].map((val, i) => (
-                            <div key={i} className="text-center group">
-                                <div className="w-16 h-16 mx-auto bg-alt rounded-full flex items-center justify-center text-primary mb-6 transition-colors group-hover:bg-accent group-hover:text-white">
-                                    <span className="font-display font-bold text-xl">{i + 1}</span>
+                            <div
+                                key={i}
+                                className="group relative"
+                            >
+                                {/* Card */}
+                                <div className="relative bg-white rounded-3xl border-2 border-border hover:border-accent/50 transition-all duration-300 p-8 h-full flex flex-col hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+
+                                    {/* Background gradient blob */}
+                                    <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${val.bgGradient} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                                    {/* Large background number */}
+                                    <div className="absolute top-4 right-4 text-7xl font-black text-slate-100 group-hover:text-accent/5 transition-colors select-none pointer-events-none">
+                                        {String(i + 1).padStart(2, '0')}
+                                    </div>
+
+                                    {/* Content - relative z-10 to stay above background */}
+                                    <div className="relative z-10 flex flex-col h-full">
+                                        {/* Icon badge */}
+                                        <div className="mb-6">
+                                            <div className={`w-20 h-20 bg-gradient-to-br ${val.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                                                <span className="text-4xl">{val.icon}</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Title */}
+                                        <h3 className="font-display text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors">
+                                            {val.title}
+                                        </h3>
+
+                                        {/* Description */}
+                                        <p className="text-secondary text-sm leading-relaxed flex-1">
+                                            {val.desc}
+                                        </p>
+
+                                        {/* Progress indicator */}
+                                        <div className="mt-6">
+                                            <div className="h-1 w-0 bg-gradient-to-r from-accent to-accent/50 group-hover:w-full transition-all duration-500 rounded-full" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 className="font-display text-xl font-bold text-primary mb-3">{val.title}</h3>
-                                <p className="text-secondary text-sm leading-relaxed max-w-[240px] mx-auto">{val.desc}</p>
                             </div>
                         ))}
                     </div>

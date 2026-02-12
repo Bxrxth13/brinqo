@@ -66,8 +66,7 @@ const Bridge = () => {
                             {/* Abstract Network Graphic Placeholder */}
                             <div className="aspect-square rounded-full bg-white border border-border p-8 relative shadow-2xl animate-pulse-slow">
                                 <div className="absolute inset-0 rounded-full border border-accent/10 animate-[spin_10s_linear_infinite]" />
-                                <div className="absolute inset-[10%] rounded-full border border-primary/5 animate-[spin_15s_linear_infinite_reverse]" />
-                                <img src="/assets/abc.jpeg" alt="Network" className="w-full h-full object-cover rounded-full" />
+                                <img src="/assets/bridge2.jpg" alt="Network" className="w-full h-full object-cover rounded-full" />
                             </div>
                         </div>
                     </div>

@@ -182,18 +182,18 @@ const Home = () => {
                         >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto lg:h-[500px]">
                                 {/* Card 1: BUILD (Tall Card) */}
-                                <div className="md:row-span-2 relative group overflow-hidden rounded-[2rem] bg-zinc-100 dark:bg-zinc-900 min-h-[300px] md:min-h-auto">
+                                <div className="md:row-span-2 relative group overflow-hidden rounded-[2rem] bg-gray-300 min-h-[300px] md:min-h-auto">
                                     <Link to="/build" className="absolute inset-0 z-20 hidden md:block" aria-label="Go to Build" />
                                     <img src="/assets/code.webp" alt="Build" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
 
-                                    <div className="relative h-full p-8 flex flex-col justify-end z-10 text-zinc-900 dark:text-white group-hover:text-white transition-colors">
-                                        <div className="bg-white dark:bg-zinc-800 p-3 rounded-xl w-fit mb-auto shadow-lg group-hover:bg-accent group-hover:text-white transition-colors">
-                                            <Layers className="w-6 h-6" />
+                                    <div className="relative h-full p-8 flex flex-col justify-end z-10 text-zinc-900 group-hover:text-white transition-colors">
+                                        <div className="bg-white p-3 rounded-xl w-fit mb-auto shadow-lg group-hover:bg-accent group-hover:text-white transition-colors">
+                                            <Layers className="w-6 h-6 text-zinc-900 group-hover:text-white" />
                                         </div>
                                         <div className="mt-8 md:mt-0">
-                                            <h3 className="font-display text-3xl font-bold mb-2"><span className="text-stroke-accent text-accent">BUILD</span></h3>
-                                            <p className="text-sm opacity-80 leading-relaxed">
+                                            <h3 className="font-display text-3xl font-bold mb-2 text-zinc-900"><span className="text-stroke-accent text-accent">BUILD</span></h3>
+                                            <p className="text-sm opacity-80 leading-relaxed text-zinc-900">
                                                 Websites, apps, & AI agents designed for scale.
                                             </p>
                                         </div>
@@ -209,15 +209,15 @@ const Home = () => {
                                 </div>
 
                                 {/* Card 2: BRAND */}
-                                <div className="relative group overflow-hidden rounded-[2rem] bg-zinc-100 dark:bg-zinc-900 p-8 flex flex-col justify-between hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors min-h-[240px]">
+                                <div className="relative group overflow-hidden rounded-[2rem] bg-rose-500 p-8 flex flex-col justify-between min-h-[240px]">
                                     <Link to="/brand" className="absolute inset-0 z-20 hidden md:block" aria-label="Go to Brand" />
                                     <img src="/assets/brand.png" alt="Brand" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
 
                                     <div className="relative z-10 flex flex-col justify-between h-full gap-8">
                                         <div className="flex justify-between items-start">
-                                            <div className="bg-white dark:bg-zinc-800 p-3 rounded-xl w-fit shadow-md group-hover:bg-accent group-hover:text-white transition-colors">
-                                                <Zap className="w-6 h-6 text-accent group-hover:text-white" />
+                                            <div className="bg-white p-3 rounded-xl w-fit shadow-md group-hover:bg-accent group-hover:text-white transition-colors">
+                                                <Zap className="w-6 h-6 text-rose-600 group-hover:text-white" />
                                             </div>
                                             {/* Mobile Button */}
                                             <Link to="/brand" className="md:hidden flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-md rounded-full text-white z-30 hover:bg-white/30 transition-colors">
@@ -225,8 +225,8 @@ const Home = () => {
                                             </Link>
                                         </div>
                                         <div>
-                                            <h3 className="font-display text-2xl font-bold mb-1 text-zinc-900 dark:text-white group-hover:text-white transition-colors">BRAND</h3>
-                                            <p className="text-zinc-500 dark:text-zinc-400 text-xs group-hover:text-white/80 transition-colors">Marketing, identity, positioning, and growth</p>
+                                            <h3 className="font-display text-2xl font-bold mb-1 text-white group-hover:text-white transition-colors">BRAND</h3>
+                                            <p className="text-white/90 text-xs group-hover:text-white/80 transition-colors">Marketing, identity, positioning, and growth</p>
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +234,7 @@ const Home = () => {
                                 {/* Card 3: BRIDGE */}
                                 <div className="relative group overflow-hidden rounded-[2rem] bg-zinc-900 text-white p-8 flex flex-col justify-between min-h-[240px]">
                                     <Link to="/bridge" className="absolute inset-0 z-20 hidden md:block" aria-label="Go to Bridge" />
-                                    <img src="/assets/bridge.jpg" alt="Bridge" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                                    <img src="/assets/bridge.webp" alt="Bridge" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
 
                                     <div className="relative z-10 flex flex-col justify-between h-full gap-8">

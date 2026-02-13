@@ -18,7 +18,7 @@ const Brand = () => {
                                 <span className="text-accent font-mono text-sm tracking-widest uppercase">Brand & Strategy</span>
                             </div>
                             <h1 className="font-display text-[48px] md:text-[72px] lg:text-[80px] font-black leading-[1.05] text-primary mb-8 tracking-[-3px]">
-                                 Build <   span className="text-accent">Brands</span>  That People <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-slate-500">Trust</span>.
+                                Build <   span className="text-accent">Brands</span>  That People <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-slate-500">Trust</span>.
                             </h1>
                             <p className="text-[18px] md:text-[20px] leading-[1.7] text-secondary max-w-[580px] mb-10">
                                 We don't just design logos; we build belief systems. Connect with your audience on a visceral level through strategic storytelling and world-class design.
@@ -35,6 +35,7 @@ const Brand = () => {
                             <div className="bg-black/5 rounded-3xl h-[320px] md:h-[420px] lg:h-[460px] overflow-hidden relative shadow-[0_20px_60px_rgba(15,23,42,0.18)]">
                                 <img
                                     src="/assets/dim.jpeg"
+                                    loading="eager"
                                     className="w-full h-full object-cover opacity-80"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

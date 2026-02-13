@@ -25,7 +25,7 @@ import {
 /* --- Animation Variants --- */
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
 };
 
 const staggerContainer = {
@@ -33,7 +33,7 @@ const staggerContainer = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.15
+            staggerChildren: 0.1
         }
     }
 };
@@ -44,7 +44,7 @@ const scaleOnHover = {
 
 const scaleIn = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } }
 };
 
 /* --- Why Brinqo Data --- */
@@ -178,13 +178,13 @@ const Home = () => {
                             className="lg:col-span-7 h-full w-full flex items-center"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3, duration: 0.8 }}
+                            transition={{ delay: 0.1, duration: 0.5 }}
                         >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-auto lg:h-[500px]">
                                 {/* Card 1: BUILD (Tall Card) */}
                                 <div className="md:row-span-2 relative group overflow-hidden rounded-[2rem] bg-gray-300 min-h-[300px] md:min-h-auto">
                                     <Link to="/build" className="absolute inset-0 z-20 hidden md:block" aria-label="Go to Build" />
-                                    <img src="/assets/code.webp" alt="Build" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                                    <img src="/assets/code.webp" alt="Build" loading="eager" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
 
                                     <div className="relative h-full p-8 flex flex-col justify-end z-10 text-zinc-900 group-hover:text-white transition-colors">
@@ -211,7 +211,7 @@ const Home = () => {
                                 {/* Card 2: BRAND */}
                                 <div className="relative group overflow-hidden rounded-[2rem] bg-rose-500 p-8 flex flex-col justify-between min-h-[240px]">
                                     <Link to="/brand" className="absolute inset-0 z-20 hidden md:block" aria-label="Go to Brand" />
-                                    <img src="/assets/brand.png" alt="Brand" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                                    <img src="/assets/brand.png" alt="Brand" loading="eager" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
 
                                     <div className="relative z-10 flex flex-col justify-between h-full gap-8">
@@ -234,7 +234,7 @@ const Home = () => {
                                 {/* Card 3: BRIDGE */}
                                 <div className="relative group overflow-hidden rounded-[2rem] bg-zinc-900 text-white p-8 flex flex-col justify-between min-h-[240px]">
                                     <Link to="/bridge" className="absolute inset-0 z-20 hidden md:block" aria-label="Go to Bridge" />
-                                    <img src="/assets/bridge.webp" alt="Bridge" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" />
+                                    <img src="/assets/bridge.webp" alt="Bridge" loading="eager" className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
 
                                     <div className="relative z-10 flex flex-col justify-between h-full gap-8">

@@ -66,7 +66,7 @@ const Bridge = () => {
                             {/* Abstract Network Graphic Placeholder */}
                             <div className="aspect-square rounded-full bg-white border border-border p-8 relative shadow-2xl animate-pulse-slow">
                                 <div className="absolute inset-0 rounded-full border border-accent/10 animate-[spin_10s_linear_infinite]" />
-                                <img src="/assets/bridge2.jpg" alt="Network" className="w-full h-full object-cover rounded-full" />
+                                <img src="/assets/bridge2.jpg" alt="Network" loading="eager" className="w-full h-full object-cover rounded-full" />
                             </div>
                         </div>
                     </div>
@@ -93,8 +93,8 @@ const Bridge = () => {
                                     key={service.id}
                                     onClick={() => setActiveService(index)}
                                     className={`w-full text-left p-6 rounded-2xl border-2 transition-all duration-300 group ${activeService === index
-                                            ? 'bg-white border-accent shadow-xl shadow-accent/10'
-                                            : 'bg-white/50 border-border hover:border-accent/50 hover:bg-white'
+                                        ? 'bg-white border-accent shadow-xl shadow-accent/10'
+                                        : 'bg-white/50 border-border hover:border-accent/50 hover:bg-white'
                                         }`}
                                 >
                                     <div className="flex items-center gap-4">

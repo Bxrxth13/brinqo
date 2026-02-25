@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
-import SplashCursor from '../components/SplashCursor';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import {
     ArrowRight,
@@ -127,16 +126,6 @@ const Home = () => {
                 <section className="relative min-h-screen pt-20 lg:pt-24 pb-10 flex items-start justify-center overflow-hidden">
                     {/* Background Elements */}
                     <div className="absolute inset-0 z-0">
-                        <SplashCursor
-                            SIM_RESOLUTION={128}
-                            DYE_RESOLUTION={1440}
-                            DENSITY_DISSIPATION={3.0}
-                            VELOCITY_DISSIPATION={1.0}
-                            PRESSURE={0.5}
-                            CURL={10}
-                            SPLAT_RADIUS={0.3}
-                            SPLAT_FORCE={6000}
-                        />
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/5 pointer-events-none" />
                     </div>
 
